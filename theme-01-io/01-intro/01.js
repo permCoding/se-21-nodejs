@@ -16,6 +16,6 @@ console.log(obj)
 console.table(obj)
 console.log(Object.keys(obj))
 
-for (let key of Object.keys(obj)) {
+for (key of Object.keys(obj)) {
     console.log(`key = ${key}, value = ${obj[key]}`);
 }
