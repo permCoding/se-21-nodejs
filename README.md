@@ -18,6 +18,7 @@ software engineering 2021-2022
 
 ### Лекции дистанционно тут:  
 
+[Кабинет Программная инженерия - bbb6](https://bbb6.psaa.ru/b/76k-oto-gpt-xpb)  
 --- 
 
 ### useful links  
