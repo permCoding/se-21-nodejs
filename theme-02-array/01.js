@@ -6,6 +6,11 @@ function example_00() { // печать массива
     console.log(...numbers); // печать элементов массива - spread
     console.log(numbers.toString());
     console.log(numbers.join(','));
+
+    arr = [ , , ];
+    console.log(arr.length, arr);
+    arr = [99, -10, ];
+    console.log(arr.length, arr);
 }
 
 function example_01() { // добавить однин элемент

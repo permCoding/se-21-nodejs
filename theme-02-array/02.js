@@ -21,6 +21,12 @@ function example_02(amount=3) { // заполнение массива
         .fill(0)
         .map((_, index) => ++index) // отображение массива
     );
+
+    console.log(
+        Array(amount)
+        .fill(0)
+        .map(() => Math.floor(Math.random()*100)) // генерация массива
+    );
 }
 
 function example_03(amount=3) { // заполнение массива, from
@@ -64,7 +70,7 @@ function example_05() { // применение spread
 
 // example_01();
 // example_01(5);
-// example_02(5);
+example_02(5);
 // example_03(5);
 // example_04();
-example_05();
+// example_05();
