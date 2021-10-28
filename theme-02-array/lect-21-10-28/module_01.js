@@ -1,7 +1,7 @@
 const pi = 3.14;
 
 function get_sum(line) {
-    hide();
+    // hide();
     return line
         .split(/\s+/)
         .map(x => +x)
