@@ -7,9 +7,14 @@ function example_00() { // печать массива
     console.log(numbers.toString());
     console.log(numbers.join(','));
 
-    arr = [ , , ];
+    arr = [ , , 4];
+    // arr = [ , , ];
     console.log(arr.length, arr);
-    arr = [99, -10, ];
+    console.table(arr);
+    for (i = 0; i <arr.length; i++) {
+        console.log(`${i}\t${arr[i]}`);
+    }
+    arr = [99, -10, , ];
     console.log(arr.length, arr);
 }
 
@@ -27,18 +32,20 @@ function example_02() { // добавить несколько элементо�
     const arr = []; // инициализация пустого массива
     arr.push(1, 2, 3); // добавить несколько элементов
     arr.push(...arr); // добавить элементы из массива
-    console.log(arr);    
+    arr.push(...arr); // добавить элементы из массива
+    console.log(arr);
 }
 
 function example_03() { // сложить массивы
     let arr_1 = [1, 2, 3]; // нельзя const, так как потом будем менять
     const arr_2 = [4, 5, 6];
+    // arr_1 + arr_2
     arr_1 = arr_1.concat(arr_2); // создать новый массив сложением двух других
-    console.log(arr_1);
+    console.log(arr_1, arr_2);
 }
 
 
-example_00();
+// example_00();
 // example_01();
 // example_02();
-// example_03();
+example_03();
