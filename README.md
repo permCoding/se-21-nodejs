@@ -50,8 +50,9 @@ software engineering 2021-2022
 Можно использовать циклы for или while, условия if и массивы.  
 За основу можете взять разбор программы, сделанной во время Лекции и размещённой в папке [labrab-02](https://github.com/permCoding/se-21-nodejs/tree/main/labrabs/labrab-02)  
 
-```
-это шаблон программы
+```js
+// это шаблон программы
+
 line = "100 200      3 5 6 999";
 
 arr_s = f_split(line);
