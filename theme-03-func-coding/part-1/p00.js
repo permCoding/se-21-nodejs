@@ -1,73 +1,123 @@
-// мутабельные методы => мутабельные данные
-// нативные методы массива в js
+// ссылочные данные
 
-// функции высшего порядка - могут принимать и возвращать функции
+// npm install lodash
+// documentation: https://lodash.com/docs/4.17.15
+const _ = require('lodash'); 
 
-function ex_01() { // реверс массива
+
+function ex_00() { // ссылка на объект массива
     const arr1 = [5, 4, 3, 2, 1, 10]; // исходное состояние массива
-    const arr2 = arr1.reverse(); // мутабельный
+    const arr2 = arr1; // присваивается ссылка на объект
+
+    console.log(arr1); // для контроля
+    console.log(arr2); // для контроля    
+
+    [arr2[0], arr2[arr2.length-1]] = [arr2[arr2.length-1], arr2[0]]; // меняем элементы arr2
+
     console.log(arr1); // для контроля
     console.log(arr2); // для контроля    
 }
 
-function ex_02() { // сортирует, преобразуя к питу String
+function ex_01() { // срез массива как копия
     const arr1 = [5, 4, 3, 2, 1, 10]; // исходное состояние массива
-    const arr2 = arr1.sort(); // мутабельный
+    const arr2 = arr1.slice(); // срез массива, неглубокое копирование
+
+    console.log(arr1); // для контроля
+    console.log(arr2); // для контроля    
+
+    [arr2[0], arr2[arr2.length-1]] = [arr2[arr2.length-1], arr2[0]]; // меняем элементы arr2
+
     console.log(arr1); // для контроля
     console.log(arr2); // для контроля    
 }
 
-function ex_03() { // анонимная функция - сравнить как числа не приводя к строкам
+function ex_02() { // меняем объекты в массиве
+    const arr1 = [
+        { "id": 1, "rate": 88 },
+        { "id": 2, "rate": 50 },
+        { "id": 3, "rate": 90 }
+    ]; // исходное состояние массива
+    const arr2 = arr1.slice(); // срез массива, неглубокое копирование
+
+    console.table(arr1); // для контроля
+    console.table(arr2); // для контроля    
+
+    [arr2[0], arr2[arr2.length-1]] = [arr2[arr2.length-1], arr2[0]]; // меняем элементы arr2
+
+    console.table(arr1); // для контроля
+    console.table(arr2); // для контроля    
+}
+
+function ex_03() { // меняем поле объекта
+    const arr1 = [
+        { "id": 1, "rate": 88 },
+        { "id": 2, "rate": 50 },
+        { "id": 3, "rate": 90 }
+    ]; // исходное состояние массива
+    const arr2 = arr1.slice(); // срез массива, неглубокое копирование
+
+    console.table(arr1); // для контроля
+    console.table(arr2); // для контроля    
+
+    arr2[0].rate = 100; // меняем содержимое объекта как элемента arr2
+
+    console.table(arr1); // для контроля
+    console.table(arr2); // для контроля    
+}
+
+function ex_04() { // _.clone() неглубокое копирование
     const arr1 = [5, 4, 3, 2, 1, 10]; // исходное состояние массива
-    const arr2 = arr1.sort((a, b) => a < b? -1: 1); // мутабельный
+    const arr2 = _.clone(arr1); // клон массива, неглубокое копирование
+
+    console.log(arr1); // для контроля
+    console.log(arr2); // для контроля    
+
+    arr2[0] = 100; // меняем содержимое элемента arr2
+
     console.log(arr1); // для контроля
     console.log(arr2); // для контроля    
 }
 
-function ex_04() { // функция как аргумент другой функции
-    function comparator(x, y) {
-        return x < y? -1: 1;
-    }
-    const arr1 = [5, 4, 3, 2, 1, 10]; // исходное состояние массива
-    const arr2 = arr1.sort(comparator); // мутабельный
-    console.log(arr1); // для контроля
-    console.log(arr2); // для контроля    
+function ex_05() { // _.clone() не работает для ссылочных типов
+    const arr1 = [
+        { "id": 1, "rate": 88 },
+        { "id": 2, "rate": 50 },
+        { "id": 3, "rate": 90 }
+    ]; // исходное состояние массива
+    const arr2 = _.clone(arr1); // клон массива, неглубокое копирование
+
+    console.table(arr1); // для контроля
+    console.table(arr2); // для контроля    
+
+    arr2[0].rate = 100; // меняем содержимое объекта как элемента arr2
+
+    console.table(arr1); // для контроля
+    console.table(arr2); // для контроля    
 }
 
-function ex_05() { // функция как объект 
-    const comparator = function (x, y) {
-        return x < y? -1: 1;
-    }
-    const arr1 = [5, 4, 3, 2, 1, 10]; // исходное состояние массива
-    const arr2 = arr1.sort(comparator); // мутабельный
-    console.log(arr1); // для контроля
-    console.log(arr2); // для контроля    
-}
+function ex_06() { // _.cloneDeep() глубокое копирование
+    const arr1 = [
+        { "id": 1, "rate": 88 },
+        { "id": 2, "rate": 50 },
+        { "id": 3, "rate": 90 }
+    ]; // исходное состояние массива
+    const arr2 = _.cloneDeep(arr1); // клон массива, неглубокое копирование
 
-function ex_06() { // функция как объект 
-    const comparator = (x, y) => x < y? -1: 1;
-    const arr1 = [5, 4, 3, 2, 1, 10]; // исходное состояние массива
-    const arr2 = arr1.sort(comparator); // мутабельный
-    console.log(arr1); // для контроля
-    console.log(arr2); // для контроля    
-}
+    console.table(arr1); // для контроля
+    console.table(arr2); // для контроля    
 
-function ex_07() { // функция как объект 
-    const comparator = (x, y) => x < y? -1: 1;
-    const cmp = comparator;
-    const arr1 = [5, 4, 3, 2, 1, 10]; // исходное состояние массива
-    const arr2 = arr1.sort(cmp); // мутабельный
-    console.log(arr1); // для контроля
-    console.log(arr2); // для контроля    
-}
+    arr2[0].rate = 100; // меняем содержимое объекта как элемента arr2
 
+    console.table(arr1); // для контроля
+    console.table(arr2); // для контроля    
+}
 
 require("./module").cls();
 
+// ex_00();
 // ex_01();
 // ex_02();
 // ex_03();
 // ex_04();
 // ex_05();
-// ex_06();
-ex_07();
+ex_06();

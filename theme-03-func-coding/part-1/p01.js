@@ -1,79 +1,73 @@
-// немутабельные методы => немутабельные данные
-// npm install lodash
-// documentation: https://lodash.com/docs/4.17.15
+// мутабельные методы => мутабельные данные
+// нативные методы массива в js
 
-const _ = require('lodash'); 
+// функции высшего порядка - могут принимать и возвращать функции
 
-const ex_01 = () => { // немутабельный метод сортировки
-    const arr1 = [5, 4, 3, 2, 1, 10];
-    const arr2 = _.sortBy(arr1); // немутабельный
-    console.log(arr1); // для контроля
-    console.log(arr2); // для контроля    
+
+function ex_01() { // реверс массива
+    const arr1 = [5, 4, 3, 2, 1, 10]; // исходное состояние массива
+    console.log("arr1 =", arr1); // для контроля
+    const arr2 = arr1.reverse(); // мутабельный
+    console.log("arr1 =", arr1); // для контроля
+    console.log("arr2 =", arr2); // для контроля
 }
 
-const ex_02 = () => { // эмуляция нативной нотации js
-    const arr1 = [5, 4, 3, 2, 1, 10];
-    const arr2 = _(arr1)
-        .sortBy()
-        .value(); // немутабельный
-    console.log(arr1);
-    console.log(arr2);
+function ex_02() { // сортирует, преобразуя к типу String
+    const arr1 = [5, 4, 3, 2, 1, 10]; // исходное состояние массива
+    const arr2 = arr1.sort(); // мутабельный
+    console.log("arr1 =", arr1); // для контроля
+    console.log("arr2 =", arr2); // для контроля    
 }
 
-const ex_03 = () => { // сортировка по выбранному полю объекта
-    const users = [
-        { name: "Беляков Андрей", age: 49},
-        { name: "Микоян Георгий", age: 60},
-        { name: "Васина Мальвина", age: 25},
-        { name: "Старлинг Кларисса", age: 33},
-        { name: "Пушкин Александр", age: 33}
-    ];
-    const arr2 = _.sortBy(users, item => item.age);
-    console.log(users);
-    console.log(arr2);
+function ex_03() { // анонимная функция - сравнить как числа не приводя к строкам
+    const arr1 = [5, 4, 3, 2, 1, 10]; // исходное состояние массива
+    const arr2 = arr1.sort((a, b) => a < b? -1: 1); // мутабельный
+    console.log("arr1 =", arr1); // для контроля
+    console.log("arr2 =", arr2); // для контроля
 }
 
-const ex_04 = () => { // сортировка в нативной нотации
-    const users = [
-        { name: "Беляков Андрей", age: 49},
-        { name: "Микоян Георгий", age: 60},
-        { name: "Васина Мальвина", age: 25},
-        { name: "Старлинг Кларисса", age: 33},
-        { name: "Пушкин Александр", age: 33}
-    ];
-    const arr2 = _(users)
-        .sortBy(item => item.age)
-        .value(); // приведение к типу данных массив
-    console.log(users);
-    console.log(arr2);
+function ex_04() { // функция как аргумент другой функции
+    function comparator(x, y) {
+        return x < y? -1: 1;
+    }
+    const arr1 = [5, 4, 3, 2, 1, 10]; // исходное состояние массива
+    const arr2 = arr1.sort(comparator); // мутабельный
+    console.log("arr1 =", arr1); // для контроля
+    console.log("arr2 =", arr2); // для контроля    
 }
 
-const ex_05 = () => { // данные из файла
-    const users = require("./users.json");
-    const arr2 = _.sortBy(users, item => item.age);
-    console.log(users);
-    console.log(arr2);
+function ex_05() { // функция как объект 
+    const comparator = function (x, y) {
+        return x < y? -1: 1;
+    }
+    const arr1 = [5, 4, 3, 2, 1, 10]; // исходное состояние массива
+    const arr2 = arr1.sort(comparator); // мутабельный
+    console.log("arr1 =", arr1); // для контроля
+    console.log("arr2 =", arr2); // для контроля    
 }
 
-const ex_06 = () => { // направление сортировки
-    const users = require("./users.json");
-    const arr2 = _.orderBy(users, ['age'], ['desc']);
-    console.log(users);
-    console.log(arr2);
+function ex_06() { // функция как объект 
+    const comparator = (x, y) => x < y? -1: 1;
+    const arr1 = [5, 4, 3, 2, 1, 10]; // исходное состояние массива
+    const arr2 = arr1.sort(comparator); // мутабельный
+    console.log("arr1 =", arr1); // для контроля
+    console.log("arr2 =", arr2); // для контроля    
 }
 
-const ex_07 = () => { // сортировка по нескольким параметрам
-    const users = require("./users.json");
-    const arr2 = _.orderBy(users, ['age', 'name'], ['desc', 'asc']);
-    console.log(users);
-    console.log(arr2);
+function ex_07() { // функция как объект 
+    const comparator = (x, y) => x < y? -1: 1;
+    const cmp = comparator;
+    const arr1 = [5, 4, 3, 2, 1, 10]; // исходное состояние массива
+    const arr2 = arr1.sort(cmp); // мутабельный
+    console.log("arr1 =", arr1); // для контроля
+    console.log("arr2 =", arr2); // для контроля    
 }
 
 
 require("./module").cls();
 
-ex_01();
-// ex_02();
+// ex_01();
+ex_02();
 // ex_03();
 // ex_04();
 // ex_05();
