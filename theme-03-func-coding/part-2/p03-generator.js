@@ -35,8 +35,8 @@ console.log(generator.next());
 console.log(generator.next());
 
 generator = gen1(100, 105);
-while (true) {
-	obj = generator.next();
-	if (obj['done']) break;
+while (true) { // бесконечный цикл
+	obj = generator.next(); // получаем следующий элемент
+	if (obj['done']) break; // закончился генератор?
 	console.log(obj.value);
 };
