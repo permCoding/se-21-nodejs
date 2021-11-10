@@ -11,9 +11,15 @@ software engineering 2021-2022
 ### Установить:  
 [Node.js](https://nodejs.org/)  
 [VS Code](https://code.visualstudio.com/)  
-Расширение Node.js Exec (запуск программы F8)  
-Установка дополнительных пакетов: npm install название-пакета (или сокращённо: npm i название-пакета)  
 [Горячие клавиши VSCode](VSCodeHotKeys.md)  
+Расширение Node.js Exec (запуск программы F8)  
+
+```js
+// Установка доп-ных пакетов:  
+npm install название-пакета  
+// или сокращённо:  
+npm i название-пакета  
+```
 
 ---  
 
