@@ -17,6 +17,7 @@ const ex_a = () => { // поля объекта + JSON
     console.log(JSON.stringify(obj, null, 4));
 
     console.table(obj);
+
     for (let item in obj) {
         console.log(`${item} => ${obj[item]}`);
     }
@@ -38,7 +39,7 @@ const ex_01 = () => { // forEach - не чистая функция - ничег
 
 const ex_02 = () => { // map - возвращает
     return require("./students.json") // без хранения промежуточных результатов
-        .map(student => JSON.stringify(student))
+        .map(student => JSON.stringify(student)) // стал массив строк
         .join('\n');
 }
 

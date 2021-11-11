@@ -9,14 +9,14 @@ const cls = () => { // clear terminal
     // process.stdout.write('\033\143'); // oct
 
     // console.log('\x1Bc'); // hex
-    process.stdout.write('\x1B\x63'); // hex
+    // process.stdout.write('\x1B\x63'); // hex
 
     // let chr = String.fromCharCode(27); // dec
     // const cls = chr+'c';
 
     // console.log(cls); // cls + \n        
     // process.stdout.write(cls);
-    // process.stdout.write(`${String.fromCharCode(27)}c`);
+    process.stdout.write(`${String.fromCharCode(27)}c`);
 
     // console.log('c'.charCodeAt(0));
 }

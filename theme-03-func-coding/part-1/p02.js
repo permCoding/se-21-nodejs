@@ -6,7 +6,8 @@ const _ = require('lodash');
 
 const ex_01 = () => { // немутабельный метод сортировки
     const arr1 = [5, 4, 3, 2, 1, 10];
-    const arr2 = _.sortBy(arr1); // немутабельный
+    const arr2 = _
+        .sortBy(arr1); // немутабельный
     console.log(arr1); // для контроля
     console.log(arr2); // для контроля    
 }
@@ -28,9 +29,10 @@ const ex_03 = () => { // сортировка по выбранному полю
         { name: "Старлинг Кларисса", age: 33},
         { name: "Пушкин Александр", age: 33}
     ];
-    const arr2 = _.sortBy(users, item => item.age);
-    console.log(users);
-    console.log(arr2);
+    const arr2 = _
+        .sortBy(users, item => item.age);
+    console.table(users);
+    console.table(arr2);
 }
 
 const ex_04 = () => { // сортировка в нативной нотации
@@ -63,10 +65,11 @@ const ex_06 = () => { // направление сортировки
 }
 
 const ex_07 = () => { // сортировка по нескольким параметрам
-    const users = require("./users.json");
-    const arr2 = _.orderBy(users, ['age', 'name'], ['desc', 'asc']);
-    console.log(users);
-    console.log(arr2);
+    console.table(
+        _(require("./users.json"))
+            .orderBy(['age', 'name'], ['desc', 'asc'])
+            .value()
+    );
 }
 
 
