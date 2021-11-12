@@ -78,6 +78,8 @@ console.log(sum);
 Решать задачи следует тут: https://stepik.org/lesson/416145/step/1?unit=405659  
 Обязательное требование: решать в функциональном стиле (map, filter, reduce).  
 [Примеры оформления программного кода для Степика](https://github.com/permCoding/se-21-nodejs/tree/main/labrabs/labrab-03-stepik)  
+Срок решения до начала следующей лабораторки...  
+
 
 ```txt
 
