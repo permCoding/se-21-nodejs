@@ -40,7 +40,7 @@ npm i название-пакета
 Лекция 02 - 14.10.21 - [Введение](https://github.com/permCoding/se-21-nodejs/tree/main/theme-01-io)  
 Лекция 03 - 28.10.21 - [Модули в Node.js - Видео-запись Лекции в BBB](https://bbb6.psaa.ru/playback/presentation/2.3/f4fd494c27cf032e06779c00db49cb30d43675a7-1635396294019)  
 Лекция 04 - 28.10.21 - [Обработка массивов](https://github.com/permCoding/se-21-nodejs/tree/main/theme-02-array)  
-Лекция 05 - 11.11.21 - [Функциональное программирование - Видео-запись Лекции в BBB](https://bbb6.psaa.ru/playback/presentation/2.3/f4fd494c27cf032e06779c00db49cb30d43675a7-1635396294019)  
+Лекция 05 - 11.11.21 - [Функциональное программирование - Видео-запись Лекции в BBB](https://bbb6.psaa.ru/playback/presentation/2.3/f4fd494c27cf032e06779c00db49cb30d43675a7-1636599886789)  
 Лекция 06 - 11.11.21 - [Функциональное программирование - примеры программ](https://github.com/permCoding/se-21-nodejs/tree/main/theme-03-func-coding)  
 
 ## ЛАБРАБ  
