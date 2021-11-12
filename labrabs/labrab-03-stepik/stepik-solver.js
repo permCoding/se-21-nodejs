@@ -3,6 +3,10 @@
 // console.log('Ctrl-D for EXIT in Linux');
 // console.log('Ctrl-C for EXIT in Windows');
 
+/*
+найти сумму чётных чисел
+*/
+
 var readline = require('readline');
 
 var rl = readline.createInterface({
