@@ -67,7 +67,7 @@ const ex_05 = () => { // решение - поля внутреннего объ
     return _(require("./students.json") // без хранения промежуточных результатов
         .map(function (student) { 
             return { 
-                'name': student.name, 
+                'name': student['name'], // имеет смысл когда поле с пробелом
                 'rate': student.rate, 
                 'male': student.private.gender
             } 
