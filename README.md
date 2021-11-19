@@ -80,6 +80,12 @@ console.log(sum);
 [Примеры оформления программного кода для Степика](https://github.com/permCoding/se-21-nodejs/tree/main/labrabs/labrab-03-stepik)  
 Срок решения до начала следующей лабораторки...  
 
+**Лабораторка 04**  
+Обработка JSON массивов  
+[Задания для самостоятельного исполнения](https://github.com/permCoding/se-21-nodejs/tree/main/labrabs/labrab-04-json)  
+Обязательное требование: решать в функциональном стиле.  
+[Примеры оформления программного кода из Лекции про JSON](https://github.com/permCoding/se-21-nodejs/tree/main/theme-04-json)  
+Срок решения до начала следующей лабораторки...  
 
 ```txt
 
