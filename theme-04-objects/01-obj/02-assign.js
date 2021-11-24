@@ -1,5 +1,6 @@
+// клонирование объектов методом копирования всех свойств по отдельности
 
-function ex_01() {
+function ex_01() { // скопировать в пустой объект
     let source = {
         name: 'Alex',
         age: 22,
@@ -8,26 +9,26 @@ function ex_01() {
         }
     };
     
-    let target = Object.assign({}, source);
+    let target = Object.assign({}, source); // копируются все свойства по отдельности в пустой объект
 
     source.age += 1;
     
     console.log(`source => ${source.toString()}`);
     console.log(`target => ${target.toString()}`);
 
-    console.log(`source => ${source}`);
+    console.log(`source => ${source}`); // при интерполяции вызывается метод toString
     console.log(`target => ${target}`);
 }
 
 
-function ex_02() {
+function ex_02() { // добавить в существующий объект
     let source = {
         name: 'Alex',
         age: 22
     };
 
     let obj = {id: 1};
-    let target = Object.assign(obj, source);
+    let target = Object.assign(obj, source); // добавить в существующий объект
 
     source.age += 1;
     
@@ -42,7 +43,7 @@ function ex_02() {
 }
 
 
-function ex_03() {
+function ex_03() { // добавить несколько объектов
     let source = {
         name: 'Alex',
         age: 22
@@ -56,8 +57,6 @@ function ex_03() {
 }
 
 
-// ex_01();
-
+ex_01();
 // ex_02();
-
-ex_03();
+// ex_03();

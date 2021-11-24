@@ -1,10 +1,11 @@
+// конструктор и акцессоры
 // приватное по договорённости
 
 class Student {
     constructor(line) {
-        this._name = line;
+        this._name = line; // поле _name
     }
-    set name(line) {
+    set name(line) { // свойство name
         this._name = line.trim();
     }
     get name() {

@@ -42,6 +42,8 @@ npm i название-пакета
 Лекция 04 - 28.10.21 - [Обработка массивов](https://github.com/permCoding/se-21-nodejs/tree/main/theme-02-array)  
 Лекция 05 - 11.11.21 - [Функциональное программирование - Видео-запись Лекции в BBB](https://bbb6.psaa.ru/playback/presentation/2.3/f4fd494c27cf032e06779c00db49cb30d43675a7-1636599886789)  
 Лекция 06 - 11.11.21 - [Функциональное программирование - примеры программ](https://github.com/permCoding/se-21-nodejs/tree/main/theme-03-func-coding)  
+Лекция 07 - 25.11.21 - [Функциональное программирование - часть 2 - генераторы, каррирование](https://github.com/permCoding/se-21-nodejs/tree/main/theme-03-func-coding)  
+Лекция 08 - 25.11.21 - [Классы и объекты - примеры программ](https://github.com/permCoding/se-21-nodejs/tree/main/theme-03-func-coding)  
 
 ## ЛАБРАБ  
 

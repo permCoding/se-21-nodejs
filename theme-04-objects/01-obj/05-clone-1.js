@@ -10,7 +10,7 @@ let source = {
     }
 };
 
-let target = _.clone(source);
+let target = _.clone(source); // клонируем объект
 
 source.age += 1;
 
