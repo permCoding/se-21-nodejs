@@ -4,7 +4,7 @@
 // yield - аналог return`а - он возвращает значение и запоминает состояние
 // при следующем обращении к функции-итератора - цикл продолжится от точки останова
 
-function* gen1(a, b) {
+function* range(a, b) {
 	let i = a;
 	while (i <= b) {
 		yield i;
@@ -12,31 +12,10 @@ function* gen1(a, b) {
 	}
 }
 
-function* gen2(a, b) {
-	for (let i = a; i <= b; i++) {
-		yield i;
-	}
-}
+let generator = range(100, 105);
 
-let sequence = [...gen1(10, 15)];
-console.log(sequence);
-
-for (let item of [...gen2(10, 15)]) {
-	console.log(item);
-}
-
-let generator = gen1(10, 15);
-console.log(generator.next());
-console.log(generator.next());
-console.log(generator.next());
-console.log(generator.next());
-console.log(generator.next());
-console.log(generator.next());
-console.log(generator.next());
-
-generator = gen1(100, 105);
 while (true) { // бесконечный цикл
 	obj = generator.next(); // получаем следующий элемент
-	if (obj['done']) break; // закончился генератор?
-	console.log(obj.value);
+	if (obj['done']) break; // закончились шаги генератора?
+	console.log(obj.value); // вывести очередной элемент
 };
