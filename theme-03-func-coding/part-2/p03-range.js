@@ -22,3 +22,11 @@ console.log(generator.next());
 console.log(generator.next());
 console.log(generator.next());
 console.log(generator.next()); // тут генератор уже пуст
+
+function* range(a, b, step) {
+	let i = a;
+	while (i <= b) {
+		yield i;
+		i += step;
+	}
+}

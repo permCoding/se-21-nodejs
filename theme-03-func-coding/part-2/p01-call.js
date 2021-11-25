@@ -34,7 +34,8 @@ const ex_04 = () => { // apply - с контекстом
     };
 
     obj1 = { x: 1, y: 2 };
-    console.log(func.apply(obj1, [10, 20, 30, 40, 50])); // подавать массивом
+    let numbers = [10, 20, 30, 40, 50];
+    console.log(func.apply(obj1, numbers)); // подавать массивом
 }
 
 const ex_05 = () => { // Math
@@ -45,7 +46,7 @@ const ex_05 = () => { // Math
 }
 
 // ex_01();
-ex_02();
+// ex_02();
 // ex_03();
 // ex_04();
-// ex_05();
+ex_05();

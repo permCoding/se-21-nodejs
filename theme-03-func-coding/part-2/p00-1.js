@@ -35,5 +35,5 @@ let x = 0;
 (() => ++x)();
 let y = (function () { 
     return ++x;
-})();
-console.log(`y = ${y}`);
+});
+console.log(`y = ${y()}`);
