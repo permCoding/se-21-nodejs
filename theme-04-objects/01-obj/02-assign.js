@@ -40,23 +40,21 @@ function ex_02() { // добавить в существующий объект
     }
 
     console.log(JSON.stringify(target));
+    console.log(JSON.stringify(source));
 }
 
 
 function ex_03() { // добавить несколько объектов
-    let source = {
-        name: 'Alex',
-        age: 22
-    };
-
     let obj = {id: 1};
+    let source = {name: 'Alex', age: 22};
     let data = {group: 'ПИб-1', curator: 'Беляков'};
+
     let target = Object.assign(obj, source, data);
 
     console.log(JSON.stringify(target));
 }
 
 
-ex_01();
+// ex_01();
 // ex_02();
-// ex_03();
+ex_03();

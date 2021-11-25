@@ -14,7 +14,7 @@ class Student {
 }
 
 
-let stud = new Student('Петрович');
+let stud = new Student('    Петрович ');
 console.log(stud); // через конструктор
 
 stud.name = ' Петро ';

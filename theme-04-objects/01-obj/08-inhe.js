@@ -17,7 +17,7 @@ class Student extends Human { // расширение класса
     constructor(name, group) {
         name = name.split(' ')[0] + ' ' + name.split(' ')[1][0] + '.';
         super(name); // вызов конструктора базового класса
-        this._group = group || 'ПИб-11';
+        this._group = group || 'ПИб-11'; // значение по умолчанию
     }    
     set group(line) { // свойство name
         this._group = line.trim();

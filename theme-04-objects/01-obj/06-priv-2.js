@@ -15,7 +15,7 @@ class Student {
 
 
 let stud = new Student('Петрович');
-console.log(stud);
+console.log(stud); // приватные поля не видны
 console.log(stud.get_name());
 
 // stud.#name = ' Петро '; // так не работает - private
