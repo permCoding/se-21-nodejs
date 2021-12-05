@@ -1,31 +1,45 @@
-/** 
- * второй синтаксис lodash - возвращает не массив, а генератор
- * npm install lodash || npm i lodash
- * documentation: https://lodash.com/docs/4.17.15
- */
-const _ = require('lodash'); 
+// второй синтаксис lodash - возвращает не массив, а генератор
 
-/** разбор метода _.value() */
+const _ = require('lodash');
+
+
 function _split() {
-    let line = '3 2 8 9 10 1 4 2 12 1';
+    let line = '3,    2, 8,9,10, 1, 4,2, 12, 1';
+
     let res;
+
     res = _(line)
-        .split(' ', 7)
+        .split(/,\s*/, 7)
         .map(_.parseInt) // это генератор
     console.log(res);
     console.log(_.isArray(res));
 
     res = _(line)
-        .split(' ')
-        .map(_.parseInt) // _.toNumber || x => +x
-        .take(7)
-        .filter(x => x%2) // только нечётные
-        .value(); // к типу данных массив
+        .split(/,\s*/)
+        .map(_.parseInt)
+        .take(5)
+        .value();
     console.log(res);
     console.log(_.isArray(res));
+
+    console.log(
+        _(line)
+            .split(/,\s*/, 7)
+            .map(_.toNumber) // x => _.toNumber(x)
+            .filter(x => x%2 == 0)
+            .join(', ')
+    );
+
+    let acc = _(line)
+        .split(/,\s*/, 7)
+        .map(_.parseInt)
+        .filter(x => x%2 == 0)
+        .reduce((a,b) => a+b);
+    console.log(acc);
 }
 
-/** разбор метода _.sortBy() */
+const print = x => process.stdout.write(`${x}\t`); // выводит без переноса
+
 function _map() {
     let arr_lines = ['12', '8', '8.2', '8.3', '10'];
     _(arr_lines)
@@ -35,7 +49,7 @@ function _map() {
         .forEach(print);
 }
 
-/** разбор метода _.toString() */
+
 function _filter() {
     let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     let check_odd = x => x%2 != 0;
@@ -46,7 +60,7 @@ function _filter() {
     console.log(res);
 }
 
-/** разбор метода _.orderBy() */
+
 function _filter_ex() {
     let users = require('./json/users.json');
     let res = _(users)
@@ -57,7 +71,7 @@ function _filter_ex() {
     console.table(res);
 }
 
-/** используем именованную функцию */
+
 function _reduce() {
     let arr = [10, 2, 3, 4, 5, 6, 7, 8, 9];
     let add_odd = (acc, next) => next%2 != 0? acc + next: acc;
