@@ -12,6 +12,15 @@ const users = [
     { name: 'barney', age: 36 }
 ];
 
+/** разбор метода _.sortBy() + forEach */
+function _sort0() {
+    let arr_lines = ['12', '8', '8.2', '8.3', '10'];
+    _(arr_lines)
+        .map(_.toNumber)
+        .sortBy()
+        .reverse()
+        .forEach(print);
+}
 
 /**
  * по одному параметру  

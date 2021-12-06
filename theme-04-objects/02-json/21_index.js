@@ -1,39 +1,32 @@
-// узнать место в отсортированном списке
+// узнать место в отсортированном массиве объектов
 
 const _ = require('lodash'); // CommonJS
 
-
-const objects = [
-    {'x': 1},
-    {'x': 2},
-    {'x': 5},
-    {'x': 8}
+const objects = [ // массив объектов
+    {'x': -8}, 
+    {'x': 5}, 
+    {'x': 1}, 
+    {'x': 2}
 ];
-
 
 console.log(
     _
-        .sortedIndexBy(objects, {'x': 3}, obj => obj.x)
+        .sortedIndexBy(objects, {'x': -8}, obj => obj.x)
 );
-
 
 console.log(
     _
-        .sortedIndexBy(objects, {'x': 9}, 'x')
+        .sortedIndexBy(objects, {'x': 5}, 'x')
 );
 
-// ====================
+console.log("-".repeat(9));
 
-const users = [
-    { name: 'fred',   age: 48 },
-    { name: 'barney', age: 34 },
-    { name: 'fred',   age: 40 },
-    { name: 'barney', age: 36 }
-];
+const users = require('./json/persons.json');
+console.log(users);
 
-const user = { name: 'ilon', age: 37 }
+const user = { name: 'Волк', age: 25 } // этого будем искать
 
-console.log(
+console.log(user, '-->', 
     _
         .sortedIndexBy(
             _.sortBy(users, obj => obj.age), user, 'age')
