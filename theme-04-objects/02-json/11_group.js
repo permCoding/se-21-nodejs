@@ -4,7 +4,6 @@ const _ = require('lodash');
 
 let names = ['Николай', 'Жора', 'Алексей', 'Алла'];
 
-
 let groups = _.groupBy(names, x => x.length); // группируем в объект по длине
 console.log('groups =', groups);
 
