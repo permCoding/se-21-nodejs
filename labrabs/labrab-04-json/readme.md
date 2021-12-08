@@ -25,7 +25,7 @@ _deadline 23.12.21 24:00_
 Вам могут пригодиться эти методы:  
 
 ```js
-zip(), zipObject(), assign  
+zip(), zipObject(), assign()  
 split(), slice(), map(), filter()  
 Object.keys(), Object.values()  
 sortBy(), orderBy()  
