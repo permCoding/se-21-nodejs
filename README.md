@@ -44,6 +44,7 @@ npm i название-пакета
 Лекция 06 - 11.11.21 - [Функциональное программирование - примеры программ](https://github.com/permCoding/se-21-nodejs/tree/main/theme-03-func-coding)  
 Лекция 07 - 25.11.21 - [Функциональное программирование - часть 2 - генераторы, каррирование](https://github.com/permCoding/se-21-nodejs/tree/main/theme-03-func-coding/part-2)  
 Лекция 08 - 25.11.21 - [Классы и объекты - примеры программ](https://github.com/permCoding/se-21-nodejs/tree/main/theme-04-objects/01-obj)  
+Лекция 09 - 09.12.21 - [JSON - примеры программ](https://github.com/permCoding/se-21-nodejs/tree/main/theme-04-objects/02-json)  
 
 ---  
 
@@ -96,7 +97,7 @@ console.log(sum);
 Обработка JSON массивов  
 [Задания для самостоятельного исполнения](https://github.com/permCoding/se-21-nodejs/tree/main/labrabs/labrab-04-json)  
 Обязательное требование: решать в функциональном стиле.  
-[Примеры оформления программного кода из Лекции про JSON](https://github.com/permCoding/se-21-nodejs/tree/main/theme-04-json)  
+[Примеры оформления программного кода из Лекции про JSON](https://github.com/permCoding/se-21-nodejs/tree/main/theme-04-objects/02-json)  
 Срок решения до начала следующей лабораторки...  
 
 ```txt

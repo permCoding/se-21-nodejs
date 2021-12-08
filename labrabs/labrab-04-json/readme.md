@@ -1,7 +1,7 @@
 # LABRAB04
 
-ЛАБРАБ-04 - 26,29.11.21  
-_deadline 09.12.21 24:00_  
+ЛАБРАБ-04 - 10,13.12.21  
+_deadline 23.12.21 24:00_  
 
 ## Немного теории о JavaScript Object Notation (JSON)  
 
@@ -25,7 +25,7 @@ _deadline 09.12.21 24:00_
 Вам могут пригодиться эти методы:  
 
 ```js
-zip(), zipObject()  
+zip(), zipObject(), assign  
 split(), slice(), map(), filter()  
 Object.keys(), Object.values()  
 sortBy(), orderBy()  
