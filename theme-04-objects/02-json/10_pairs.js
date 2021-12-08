@@ -33,7 +33,7 @@ function ex_03() {
     );    
 }
 
-function ex_04() {
+function ex_04() { // массив объектов
     let men = {
         "id": 60156,
         "name": "ilon",
@@ -49,7 +49,30 @@ function ex_04() {
     console.log(JSON.stringify(arr_objs, null, 2));    
 }
 
+function ex_05() { // массив собрать в объект
+    let men = {
+        "id": 60156,
+        "name": "ilon",
+        "city": "Houston",
+        "age": 56,
+        "gender": true
+    };
+
+    let arr_objs = _
+        .map(_.toPairs(men).filter(x => !isNumber(x[1])), 
+            item => _.fromPairs([item])
+        );
+
+    let obj1 = _
+        .reduce(arr_objs, (acc, cur) => _.assign(acc, cur),  {});
+    console.log(obj1);
+
+    let obj2 = Object.assign({}, ...arr_objs);
+    console.log(obj2);
+}
+
 // ex_01();
 // ex_02();
 // ex_03();
-ex_04();
+// ex_04();
+ex_05();
