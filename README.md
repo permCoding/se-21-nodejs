@@ -45,13 +45,18 @@ npm i название-пакета
 Лекция 07 - 25.11.21 - [Функциональное программирование - часть 2 - генераторы, каррирование](https://github.com/permCoding/se-21-nodejs/tree/main/theme-03-func-coding/part-2)  
 Лекция 08 - 25.11.21 - [Классы и объекты - примеры программ](https://github.com/permCoding/se-21-nodejs/tree/main/theme-04-objects/01-obj)  
 Лекция 09 - 09.12.21 - [JSON - примеры программ](https://github.com/permCoding/se-21-nodejs/tree/main/theme-04-objects/02-json)  
+Лекция 10 - 09.12.21 - [JSON - примеры программ](https://github.com/permCoding/se-21-nodejs/tree/main/theme-04-objects/02-json)  
 
 ---  
 
-Лекция 10 - 09.12.21 - [csv](https://github.com/permCoding/se-21-nodejs)  
-Лекция 11 - 23.12.21 - [async](https://github.com/permCoding/se-21-nodejs)  
-Лекция 12 - 23.12.21 - [sql](https://github.com/permCoding/se-21-nodejs)  
-Лекция 12 - 23.12.21 - [express](https://github.com/permCoding/se-21-nodejs)  
+Лекция 11 - 23.12.21 - [csv](https://github.com/permCoding/se-21-nodejs)  
+Лекция 12 - 23.12.21 - [csv](https://github.com/permCoding/se-21-nodejs)  
+
+---  
+
+Лекция 13 - 23.12.21 - [async](https://github.com/permCoding/se-21-nodejs)  
+Лекция 14 - 23.12.21 - [sql](https://github.com/permCoding/se-21-nodejs)  
+Лекция 15 - 23.12.21 - [express](https://github.com/permCoding/se-21-nodejs)  
 
 ---  
 
