@@ -48,10 +48,10 @@ npm i название-пакета
 
 ---  
 
-Лекция 09 - 09.12.21 - [theme](https://github.com/permCoding/se-21-nodejs)  
-Лекция 10 - 09.12.21 - [theme](https://github.com/permCoding/se-21-nodejs)  
-Лекция 11 - 23.12.21 - [theme](https://github.com/permCoding/se-21-nodejs)  
-Лекция 12 - 23.12.21 - [theme](https://github.com/permCoding/se-21-nodejs)  
+Лекция 10 - 09.12.21 - [csv](https://github.com/permCoding/se-21-nodejs)  
+Лекция 11 - 23.12.21 - [async](https://github.com/permCoding/se-21-nodejs)  
+Лекция 12 - 23.12.21 - [sql](https://github.com/permCoding/se-21-nodejs)  
+Лекция 12 - 23.12.21 - [express](https://github.com/permCoding/se-21-nodejs)  
 
 ---  
 
