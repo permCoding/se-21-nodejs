@@ -39,10 +39,7 @@ function _nota_js(line) {
     console.log(res, _.isArray(res)? "массив":"генератор");
 }
 
-
-// console.log('\x1Bc');
-
 let line = '3 2 8 9 10 1 4 2 12 1';
-_nota_lo(line);
-_nota_va(line);
+// _nota_lo(line);
+// _nota_va(line);
 _nota_js(line);

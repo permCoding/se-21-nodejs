@@ -54,7 +54,7 @@ function _sort3() {
 
 
 // _sort1();
-_sort2();
-// _sort3();
+// _sort2();
+_sort3();
 
 console.table(users); // проверка сохранения чистоты функций
