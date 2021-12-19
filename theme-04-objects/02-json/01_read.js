@@ -42,10 +42,10 @@ function _reduce_async_(func, file) {
 }
 
 
-_reduce_sync();
+// _reduce_sync();
 
 let sum1 = (acc, next) => next%2? acc + next: acc;
 let sum2 = (acc, next) => next%2 == 0? acc + next: acc;
 
-_reduce_async(sum1, "./txt/data_1.txt");
+// _reduce_async(sum1, "./txt/data_1.txt");
 _reduce_async_(sum2, "./txt/data_1.txt");

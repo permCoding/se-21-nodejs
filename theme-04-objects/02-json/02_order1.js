@@ -40,8 +40,8 @@ function _order() {
 }
 
 
-_string();
+// _string();
 
-_sort();
+// _sort();
 
 _order();
