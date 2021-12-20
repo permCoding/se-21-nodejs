@@ -1,17 +1,22 @@
 const readln = require("readline-sync");
-const es = require('./dict_chess.json');
+const es = require('./arr_chess.json');
 
 const menu = ["Exit", "Yes", "No"]
 console.log("Экспертная система - ", es.title);
 
-post = Object.keys(es.dict)[0];
+let pos = 0;
 while (true) {
+    let post = es.arr[pos];
     console.log('Фигура =>', post); // печатаем текущее положение
     if (post.slice(-1) == '.') break;
+
+    key = String(pos);
+    answers = es.dict[key];
+
     menu.forEach((item,i) => console.log(`[${i}] ${item}`)); // варианты ответа
     answer = readln.questionInt("Your choice ? "); // читаем ответ с консоли
     if (answer == 0) break;
-    post = Object.values(es.dict[post])[answer-1];
+    pos = answers[answer-1];
 };
 
 console.log("The end...");
