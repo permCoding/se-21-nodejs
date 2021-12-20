@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Экспертная система</title>
+    <link rel="stylesheet" href="es.css">
+</head>
+
+<body onload="init()">
+    <br><div id="title"></div><br>
+    <div>
+        <table>
+            <tr>
+                <td height=100 id="quest"></td>
+            </tr>
+            <tr>
+                <td height=66
+                    id="itemYes"
+                    onmousedown="next(1)"
+                    onmouseover="itemOn('Yes', 1)"
+                    onmouseout="itemOn('Yes', 0)">ДА
+                </td>
+            </tr>
+            <tr>
+                <td height=66
+                    id="itemNo"
+                    onmousedown="next(2)"
+                    onmouseover="itemOn('No', 1)"
+                    onmouseout="itemOn('No', 0)">НЕТ
+                </td>
+            </tr>
+        </table>
+        <br><img src="img/0.png" id="img" onClick="window.location.reload()" />
+        <br><div class="footer">Кликни на рисунок для сброса.</div>
+    </div>
+
+    <script src="db.js"></script>
+    <script src="es_bin.js"></script>
+</body>
+</html>
