@@ -1,6 +1,8 @@
 # se-21-nodejs
 software engineering 2021-2022
 
+[**КУРСОВОЙ ПРОЕКТ**](https://github.com/permCoding/se-21-nodejs/tree/main/CourseProject)  
+
 Объём учебной дисциплины  
 (семестр 1 - nodejs): Лекций - 12; л/р - 9; Экзамен + КП  
 (семестр 2 - C#): Лекций - 12; л/р - 9; Экзамен    
