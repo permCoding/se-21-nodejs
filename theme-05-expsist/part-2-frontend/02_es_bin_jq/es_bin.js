@@ -23,7 +23,7 @@ let next = function (answer) {
 
 let add_post = function (post) {
     let text = $('#questions').html();
-    $('#questions').html(text + '\n' + post);
+    $('#questions').html(text + '<br>' + post);
 } 
 
 // обработчики событий jQuery
