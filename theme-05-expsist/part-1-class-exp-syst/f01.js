@@ -1,3 +1,6 @@
+// Бинарное дерево решений
+// https://drive.google.com/file/d/1qxR2HsltOp0lNU7ApmXjBX_YWZ6PRYEl/view?usp=sharing
+
 const es = require('./family.json');
 
 console.log("Экспертная система - ", es.title);
