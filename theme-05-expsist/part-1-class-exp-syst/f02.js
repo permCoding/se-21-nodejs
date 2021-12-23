@@ -7,7 +7,7 @@ let quest = " | Найти папу(1) / маму(2) ?"
 let pos = 0;
 
 console.log('-', es.array_bin[pos] + quest); // задаём вопрос
-answer = Number(readln.question('1/2:')); // читаем ответ с консоли
+answer = readln.questionInt('1/2:'); // читаем ответ с консоли
 pos = pos*2 + answer;
 
 console.log('-', es.array_bin[pos] + quest); // задаём вопрос

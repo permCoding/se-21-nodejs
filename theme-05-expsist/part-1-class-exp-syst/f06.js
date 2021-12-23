@@ -1,5 +1,5 @@
 const readln = require("readline-sync");
-const es = require('./arr_chess.json');
+const es = require('./ass_arr_chess.json');
 
 const menu = ["Exit", "Yes", "No"]
 console.log("Экспертная система - ", es.title);

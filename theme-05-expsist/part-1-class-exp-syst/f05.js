@@ -11,7 +11,7 @@ while (true) {
     menu.forEach((item,i) => console.log(`[${i}] ${item}`)); // варианты ответа
     answer = readln.questionInt("Your choice ? "); // читаем ответ с консоли
     if (answer == 0) break;
-    post = Object.values(es.dict[post])[answer-1];
+    post = es.dict[post][answer-1];
 };
 
 console.log("The end...");

@@ -1,6 +1,10 @@
 class Es_binary {
     _menu = ["Exit", "Yes", "No"]; // свойство menu
-    
+
+    set menu(array_menu) {
+        this._menu = array_menu;
+    }
+
     constructor(name_file) {
         this.readln = require("readline-sync");
         this._es = require(name_file);
@@ -13,9 +17,6 @@ class Es_binary {
     /**
      * @param {string[]} array_menu
      */
-    set menu(array_menu) {
-        this._menu = array_menu;
-    }
 
     print_menu = function () {
         this._menu.forEach((item,i) => console.log(`[${i}] ${item}`));
