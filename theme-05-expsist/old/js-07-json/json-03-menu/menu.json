@@ -1,9 +1,0 @@
-{
-    "Меню":"Файл",
-    "commands":
-    [
-        {"title":"Новый","action":"CreateDoc"},
-        {"title":"Открыть","action":"OpenDoc"},
-        {"title":"Закрыть","action": "CloseDoc"}
-    ]
-}
