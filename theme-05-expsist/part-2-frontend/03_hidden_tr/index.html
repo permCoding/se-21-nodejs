@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Экспертная система</title>
+    <link rel="stylesheet" href="es.css">
+</head>
+
+<body>
+
+    <br><div id="title"></div><br>
+    
+    <table>
+        <tr>
+            <td class="quest" colspan=2 id="quest"></td>
+        </tr>
+        <tr class="answer answer0">
+            <td class="item" id="answer0">Yes</td>
+        </tr>
+        <tr class="answer answer1">
+            <td class="item" id="answer1">No</td>
+        </tr>
+        <tr class="answer answer2">
+            <td class="item" id="answer2">Yes</td>
+        </tr>
+        <tr class="answer answer3">
+            <td class="item" id="answer3">No</td>
+        </tr>
+        <tr class="answer answer4">
+            <td class="item" id="answer4">Yes</td>
+        </tr>
+        <tr class="answer answer5">
+            <td class="item" id="answer5">No</td>
+        </tr>
+    </table>
+
+    <br><img src="img/0.png" />
+    <br><div class="footer">Кликни на рисунок для сброса.</div>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="db.js"></script> <!--база знаний-->
+    <script src="es_bin.js"></script> <!--машина вывода-->
+
+</body>
+</html>
