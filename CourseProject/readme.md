@@ -43,7 +43,7 @@
 - нативного js - пример: https://pcoding.ru/jsprim/es/es_bin_js/index.html  
 - или специализированной библиотеки jQuery - пример: https://pcoding.ru/jsprim/es/es_bin_jq/index.html  
 
-Пример реализации с мультидеревом выбора (без картинок) - https://pcoding.ru/jsprim/es/es_multi/index.html.  
+Пример реализации с мультидеревом выбора (без картинок) - https://pcoding.ru/jsprim/es/es_multi/index.html  
 Обрабатывает ситуации - отказ от выбора (перезагрузка html-страницы), выбор сделан (достигли листка дерева выбора), в базе данных в выбранной категории нет вариантов выбора.  
 Примерный вид интерфейса можно оценить тут:  
 ![multi](multi.jpg) ![null](null.jpg) ![stop](stop.jpg)   
