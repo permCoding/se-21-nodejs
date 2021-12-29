@@ -39,13 +39,17 @@
 - синий  
 ```
 
-Для манипуляции с объектами DOM'а можно использовать методы:  
-- нативного js - пример: https://pcoding.ru/jsprim/es/es_bin_js/index.html  
-- или специализированной библиотеки jQuery - пример: https://pcoding.ru/jsprim/es/es_bin_jq/index.html  
+Для манипуляции с объектами DOM'а можно использовать методы нативного js или библиотеки jQuery. Примеры вариантов реализации:  
+> 1) бинарное дерево решений  
+> > - нативный js: https://pcoding.ru/jsprim/es/es_bin_js/index.html  
+> > - jQuery: https://pcoding.ru/jsprim/es/es_bin_jq/index.html  
+> 2) мульти дерево решений  
+> > - jQuery: https://pcoding.ru/jsprim/es/es_multi_jq/index.html  
+> > - нативный js: https://pcoding.ru/jsprim/es/es_multi_js/index.html  
 
-Пример реализации с мультидеревом выбора (без картинок) - https://pcoding.ru/jsprim/es/es_multi_jq/index.html  
-Обрабатывает события и ситуации:  
-- выбора одного варианта из многих,  
+Обрабатываются события и ситуации:  
+
+- выбора одного варианта из нескольких,  
 - отказ от выбора (перезагрузка html-страницы),  
 - выбор сделан (достигли листка дерева выбора),  
 - в базе данных в выбранной категории нет вариантов выбора.  
