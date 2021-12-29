@@ -1,0 +1,38 @@
+body {
+    background-color: rgb(15, 35, 28);
+    color: #dd7;
+    font-family: "Comic Sans MS";
+    font-size: 24px;
+}
+table {
+    width: 60%;
+    background-color: #464;
+    border-width: 1px;
+    border-style: dashed;
+    border-color: yellow;
+    margin: auto;
+}
+td {
+    padding-left: 15px;
+    height: 100px;
+    border-color: grey;
+    border-width: 1px;
+    border-style: solid;
+    text-align: center;
+}
+td.quest {
+    height: 90px;
+    background-color: #353;
+    color: #d96;
+}
+td.answer {
+    height: 60px;
+}
+div {
+    text-align: center;
+}
+div.help {
+    color: rgb(143, 188, 143);
+    font-size: 14px;
+    margin-bottom: 4px;
+}
