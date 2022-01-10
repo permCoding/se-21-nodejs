@@ -1,0 +1,36 @@
+body {
+    background-color: gainsboro; /* цвет фона */
+    font-family: Arial, Helvetica, sans-serif; /* шрифты */
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+    width: 68%; /* Ширина таблицы */
+    margin: auto; /* Выравнивание по центру */
+}
+
+th, td {
+    border: 1px solid black; /* Параметры рамки */
+    text-align: center; /* Выравнивание по центру */
+    padding: 4px; /* Поля вокруг текста */
+}
+
+th {
+    background: #fc0; /* Цвет фона ячейки */
+    height: 32px; /* Высота ячеек */
+}
+
+td {
+    background: rgb(255, 244, 200); /* Цвет фона ячейки */
+}
+
+td.editor {
+    background: rgb(190, 190, 190); /* Цвет фона ячейки */
+}
+
+a { 
+    text-decoration: none; /* Отменяем подчеркивание у ссылки */
+    color: green;
+    font-weight: 600;
+}

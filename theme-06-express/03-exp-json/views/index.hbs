@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+    <h3>Поля объекта</h1>
+    <table>
+
+        <tr>
+            <th>{{lang}}</th>
+            <th>{{lean}}</th>
+            <th>{{lev}}</th>
+        </tr>
+
+        {{#each data}}
+            <tr>
+                <td>{{this.lang}}</td>
+                <td>{{this.isLearning}}</td>
+                <td>{{this.level}}</td>
+            </tr>
+        {{/each}}
+    </table>
+</body>
+<html>

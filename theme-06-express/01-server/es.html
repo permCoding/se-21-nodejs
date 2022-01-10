@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Экспертная система</title>
+    <style>
+        body {
+            background-color: rgb(15, 35, 28);
+            color: #dd7;
+            font-family: "Comic Sans MS";
+            font-size: 24px;
+        }
+        table {
+            width: 60%;
+            background-color: #464;
+            border-width: 1px;
+            border-style: dashed;
+            border-color: yellow;
+            margin: auto;
+        }
+        td {
+            padding-left: 15px;
+            height: 100px;
+            border-color: grey;
+            border-width: 1px;
+            border-style: solid;
+            text-align: center;
+        }
+        td.quest {
+            height: 90px;
+            background-color: #353;
+            color: #d96;
+        }
+        td.answer {
+            height: 60px;
+        }
+        div {
+            text-align: center;
+        }
+        div.help {
+            color: rgb(143, 188, 143);
+            font-size: 14px;
+            margin-bottom: 4px;
+        }        
+    </style>
+    <script>
+        let es = {
+            "title": "ЭС - подбор животного в зоопарк",
+            "start": "группа животного",
+            "dict": {
+                "группа животного": ["беспозвоночные", "позвоночные"], 
+                "беспозвоночные": ["иглокожие", "раки", "паукообразные", "насекомые"], 
+                "иглокожие": [ ], 
+                "раки": ["флоридский"], 
+                "паукообразные": ["птициед", "сенокосец"], 
+                "насекомые": ["богомол", "муравей-портной"], 
+                "позвоночные": ["рыбы", "земноводные", "пресмыкающиеся", "птицы", "млекопитающие"], 
+                "рыбы": ["океанская", "пресноводная", "аквариумная"], 
+                "океанская": ["акула"], 
+                "пресноводная": ["щука", "судак", "окунь"], 
+                "аквариумная": ["гуппи"], 
+                "земноводные": [ ], 
+                "пресмыкающиеся": [ ], 
+                "птицы": [ ], 
+                "млекопитающие": ["грызуны", "насекомоядные", "хищные", "парнокопытные", "китообразные"], 
+                "грызуны": ["белка", "хомяк"], 
+                "насекомоядные": ["ёж"], 
+                "хищные": ["лев", "тигр", "гиена" ], 
+                "парнокопытные": [ ], 
+                "китообразные": ["дельфин", "кашалот"] 
+            }
+        }
+    </script> <!--база знаний-->
+</head>
+
+<body>
+    
+    <br><div id="title">11</div>
+    <br><div class="help" id="help"></div>
+    
+    <table id="dialog">
+        <tr id="reload">
+            <td class="quest" id="quest"></td>
+        </tr>
+        <tr class="line line0">
+            <td class="answer" id="answer0"></td>
+        </tr>
+        <tr class="line line1">
+            <td class="answer" id="answer1"></td>
+        </tr>
+        <tr class="line line2">
+            <td class="answer" id="answer2"></td>
+        </tr>
+        <tr class="line line3">
+            <td class="answer" id="answer3"></td>
+        </tr>
+        <tr class="line line4">
+            <td class="answer" id="answer4"></td>
+        </tr>
+        <tr class="line line5">
+            <td class="answer" id="answer5"></td>
+        </tr>
+    </table>
+
+    <script>
+        // global variables
+        let colors = ['#464', '#777']; // массив цветов выкл/вкл
+        let run; // запущено или остановлено приложение
+        let _quest = document.querySelector('#quest'); // элемент вопроса
+        let _title = document.querySelector('#title'); // элемент заголовка
+        let _help = document.querySelector('#help'); // элемент подсказки
+
+        // functions
+        const init = function () { // инициализация
+            run = true; // запускаем приложение
+            _title.innerHTML = es.title;
+            _help.innerHTML = 'Кликни на заголовок таблицы для сброса.';
+            print_dialog(es.start); // печатаем первый вопрос и ответы
+        };
+
+        const print_dialog = function (post) { // варианты ответов
+            document
+                .querySelectorAll('.line') // все по имени класса
+                .forEach(line => line.hidden = true); // делаем скрытыми
+
+            let answers = es.dict[post]; // узнаем текущие ответы
+
+            if (typeof answers === 'undefined') { // если уже достигнут листок дерева
+                run = false; // остановить работу ЭС
+                _quest.innerHTML = `Выбор сделан -> ${post.toUpperCase()}`; // публикуем выбор
+            }
+            else {
+                if (answers.length === 0) { // если нет ответов на вопрос
+                    run = false; // остановить работу ЭС
+                    _quest.innerHTML = `Для категории "${post}" нет выбора.`;
+                }
+                else {  // публикуем вопрос и варианты ответов
+                    _quest.innerHTML = `Сделайте выбор из категории<br>"${post}":`;    
+                    answers
+                        .forEach((answer, index) => {
+                            document.querySelector('#answer' + String(index)).innerHTML = answer;
+                            document.querySelector('.line' + String(index)).hidden = false;
+                        });
+                }
+            }
+        }
+
+        // event handlers
+        document // при загрузке страницы
+            .addEventListener("DOMContentLoaded", init);
+
+        document // при клике по заголовку таблицы - начинаем сначала
+            .querySelector('#reload')
+            .addEventListener('click', init);
+
+        document // при клике по ячейке таблицы
+            .querySelectorAll('#dialog .answer') // найти массив ячеек таблицы с ответами
+            .forEach(td_answer => { // для каждой ячейки назначить обработчики событий
+                td_answer.addEventListener("click", () => print_dialog(td_answer.innerHTML));
+                td_answer.addEventListener('mouseenter', () => td_answer.style.backgroundColor = colors[1]);
+                td_answer.addEventListener('mouseleave', () => td_answer.style.backgroundColor = colors[0]);
+            });
+
+    </script> <!--машина вывода-->
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+[
+    {
+        "lang": "Python",
+        "isLearning": true,
+        "level": 10
+    },
+    {
+        "lang": "JavaScript",
+        "isLearning": true,
+        "level": 4
+    },
+    {
+        "lang": "C#",
+        "isLearning": true,
+        "level": 7
+    }
+]
