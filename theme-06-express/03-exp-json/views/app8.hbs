@@ -5,16 +5,21 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
 </head>
-
 <body>
     <h3>Поля объекта</h1>
     <table>
+
         <tr>
-            <td>{{lang}}</td>
-            <td>{{isLearning}}</td>
-            <td>{{level}}</td>
+            <th>Language</th>
+            <th>Level</th>
         </tr>
+
+        {{#each data}}
+            <tr>
+                <td>{{this.lang}}</td>
+                <td>{{this.level}}</td>
+            </tr>
+        {{/each}}
     </table>
 </body>
-
 <html>

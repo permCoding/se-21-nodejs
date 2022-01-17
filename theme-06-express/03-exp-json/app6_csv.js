@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = require('./config.json').port;
 const server_info = require('./utils').server_info;
-const arr = require('./example.json');
+const arr = require('./utils').csv_to_json('example.csv'); // массив объектов из csv-файла
 const _ = require('lodash');
 
 let name_fields = {

@@ -1,8 +1,12 @@
 {
   "dependencies": {
+    "csvjson": "^5.1.0",
     "express": "^4.17.2",
+    "fs": "^0.0.1-security",
     "hbs": "^4.2.0",
     "lodash": "^4.17.21",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "sqlite-sync": "^0.3.9",
+    "sqlite3": "^5.0.2"
   }
 }
