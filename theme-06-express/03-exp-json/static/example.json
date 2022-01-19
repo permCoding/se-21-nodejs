@@ -10,6 +10,11 @@
         "level": 4
     },
     {
+        "lang": "Pascal",
+        "isLearning": false,
+        "level": 0
+    },
+    {
         "lang": "C#",
         "isLearning": true,
         "level": 7

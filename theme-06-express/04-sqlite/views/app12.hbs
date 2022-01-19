@@ -3,23 +3,22 @@
 <head>
     <title>Example</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="/static/style.css" />
-    <link rel="shortcut icon" href="/static/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
 </head>
 <body>
     <h3>Поля объекта</h1>
     <table>
 
         <tr>
-            <th>{{fields.lang}}</th>
-            <th>{{fields.lean}}</th>
-            <th>{{fields.lev}}</th>
+            <th>index</th>
+            <th><a href="/sort/lang">Language</a></th>
+            <th><a href="/sort/level">Level</a></th>
         </tr>
 
         {{#each data}}
             <tr>
+                <td>{{@index}}</td>
                 <td>{{this.lang}}</td>
-                <td>{{this.isLearning}}</td>
                 <td>{{this.level}}</td>
             </tr>
         {{/each}}

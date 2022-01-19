@@ -29,6 +29,10 @@ td.editor {
     background: rgb(190, 190, 190); /* Цвет фона ячейки */
 }
 
+td.dark {
+    background: rgb(150, 190, 150); /* Цвет ячейки false */
+}
+
 a { 
     text-decoration: none; /* Отменяем подчеркивание у ссылки */
     color: green;

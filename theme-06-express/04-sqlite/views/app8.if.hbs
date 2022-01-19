@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+<body>
+    <h3>Поля объекта</h1>
+    <table>
+
+        <tr>
+            <th>Language</th>
+            <th>Level</th>
+        </tr>
+
+        {{#each data}}
+            {{#if this.isLearning}}
+                <tr>
+                    <td>{{this.lang}}</td>
+                    <td>{{this.level}}</td>
+                </tr>
+            {{else}}
+            <!--            
+                <tr>
+                    <td class="dark">{{this.lang}}</td>
+                    <td class="dark">{{this.level}}</td>
+                </tr>
+            -->
+            {{/if}}
+        {{/each}}
+    </table>
+</body>
+<html>
