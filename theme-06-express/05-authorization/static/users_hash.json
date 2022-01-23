@@ -1,0 +1,14 @@
+[
+    {
+        "username": "admin",
+        "password": "$2a$04$KSbhgHnAa1EsZdpoCTJGQ.6wxz07nTFkk8bP8tJmu4C0zKU1vXvpu"
+    },
+    {
+        "username": "user",
+        "password": "$2a$04$2IfNNYyLrzcVCnlTO0wyLuwPIGgYkhtJrOyQ1egc07LdQrilNFl2G"
+    },
+    {
+        "username": "student",
+        "password": "$2a$04$5x6//QrTkblHXJBwhm9iJ.Eqqa.m7tCtpmZ7kd.yS0pA9t25yjJOW"
+    }
+]

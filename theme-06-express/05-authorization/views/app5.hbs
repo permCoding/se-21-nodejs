@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Авторизация</title>
+	<link rel="stylesheet" type="text/css" href="/static/login.css" />
+    <link rel="shortcut icon" href="/static/favicon.ico" />
+</head>
+
+<body>
+
+    <div id="login-form">
+        <h1>Пройти регистрацию</h1>
+        <fieldset>
+            <form action="/reg" method="post">
+                <input class="field" type="text" placeholder="username" 
+                    id="username" name="username" value="{{user.username}}" />
+                <input class="field" type="password" placeholder="password" 
+                    id="password" name="password" value="{{user.password}}" />
+                <input type="submit" value="Зарегистрировать">
+            </form>
+        </fieldset>
+        <div class=help>{{hint}}</div>
+    </div>
+    
+</body>
+</html>
