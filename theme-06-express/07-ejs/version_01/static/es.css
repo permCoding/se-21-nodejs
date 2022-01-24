@@ -1,0 +1,65 @@
+body {
+    background-color: rgb(15, 35, 28);
+    color: #dd7;
+    font-family: "Comic Sans MS";
+    font-size: 24px;
+}
+
+div {
+    text-align: center;
+}
+div.hint {
+    color: rgb(143, 188, 143);
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+a { 
+    text-decoration: none; /* Отменяем подчеркивание у ссылки */
+}
+
+table {
+    width: 60%;
+    background-color: #464;
+    border-width: 1px;
+    border-style: dashed;
+    border-color: yellow;
+    margin: auto;
+}
+
+td {
+    border-color: grey;
+    border-width: 1px;
+    border-style: solid;
+    text-align: center;
+    position: relative; /* Относительное позиционирование */
+    vertical-align: middle;
+    margin: auto;
+}
+td.quest {
+    height: 90px;
+    background-color: #353;
+}
+td.quest a {
+    color: #d96;
+    position: absolute; /* Абсолютное позиционирование */
+    left: 0; right: 0; /* По ширине ячейки */
+    top: 0; bottom: 0; /* По высоте ячейки */
+    padding-top: 30px;
+}
+td.answer {
+    height: 60px;
+}
+td.answer a {
+    position: absolute; /* Абсолютное позиционирование */
+    left: 0; right: 0; /* По ширине ячейки */
+    top: 0; bottom: 0; /* По высоте ячейки */
+    color: #ffc; /* Цвет ссылок */
+    padding-top: 15px; /* Поля вокруг текста */
+}
+td.answer a:hover {
+    color: #511; /* Цвет ссылок */
+    background: #898; /* Цвет фона */
+}
+
+/* .dialog tr:hover { background: #676; } */
