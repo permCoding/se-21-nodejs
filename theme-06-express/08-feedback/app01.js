@@ -19,13 +19,6 @@ app.use('/static', express.static(__dirname + '/static'));
 app.set('view engine', 'ejs'); // npm i ejs
 
 // обработчики событий
-app.get('/quest/:quest', function (req, res) {
-
-    res.render('index', obj_data);    
-});
-
-/* изменить данные абитуриента */
-
 app.get("/feedback", function(req, res) {
     res.render("feedback.ejs", obj_data);
 });
