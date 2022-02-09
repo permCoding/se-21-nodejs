@@ -3,6 +3,6 @@ require("http") // модуль http есть по умолчанию
     .listen(3000);
 
 /* 
-    остановить сервер -> Ctrl+C || Ctrl+D <- Windows or Linux
+    остановить сервер -> Ctrl+C <- Windows or Linux
     смотрим работу через браузер -> http://localhost:3000
 */

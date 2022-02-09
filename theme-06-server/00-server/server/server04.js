@@ -7,8 +7,7 @@ const server_dialog = (request, response) => {
 
     fs.readFile('./server03.html', 'utf8', (error, content) => {
         if (error) throw error;
-        response.write(content);
-        response.end();
+        response.end(content);
     }); // асинхронное чтение
 };
 

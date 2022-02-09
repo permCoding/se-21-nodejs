@@ -10,12 +10,6 @@ const server_dialog = (request, response) => {
 http.createServer(server_dialog).listen(3000);
 
 /* 
-    остановить сервер -> Ctrl+C || Ctrl+D <- Windows or Linux
+    остановить сервер -> Ctrl+C <- Windows or Linux
     смотрим работу через браузер -> http://localhost:3000
-*/
-
-/*
-https://nodejsdev.ru/guide/create-server/#_3
-https://metanit.com/web/nodejs/3.1.php
-http://code.mu/ru/javascript/nodejs/book/prime/server/response/
 */

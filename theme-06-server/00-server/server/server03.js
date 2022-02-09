@@ -6,9 +6,8 @@ const server_dialog = (request, response) => {
     response.setHeader('Content-Type', 'text/html; charset=utf-8;');
     
     let content = fs.readFileSync('./server03.html', 'utf8'); // синхронное чтение
-    response.write(content);
-
-    response.end();
+    
+    response.end(content);
 };
 
 http.createServer(server_dialog).listen(port);

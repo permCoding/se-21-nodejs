@@ -1,13 +1,14 @@
 const http = require("http");
 
-const server = http
-    .createServer((req, res) => res.end('- start server'))
-    .listen(3000);
+const callback = (req, res) => res.end('start server\nbrowser view');
 
-server.on('close', function() {
-    console.log('- stop server');
-});
+// создали объект сервера
+const server = http.createServer(callback);
 
-process.on('SIGINT', function() {
-    server.close();
-});
+// назначили обработчики событий
+server.on("error", err => console.log(`Error: ${err}`));
+server.on("request", () => console.log('request'));
+server.on("listening", () => console.log(`listening: ${server.address().port}`));
+
+// запустили сервер
+server.listen(3000);
