@@ -1,0 +1,14 @@
+{
+    "debug": {
+        "port": 3000,
+        "hostname": "127.0.0.1"
+    },
+    "deploy": {
+        "port": 42011,
+        "hostname": "coding.1gb.ru"
+    },
+    "deployp": {
+        "port": 42025,
+        "hostname": "pcoding.1gb.ru"
+    }    
+}
