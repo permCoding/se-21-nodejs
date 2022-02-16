@@ -1,4 +1,5 @@
 const { readdirSync, statSync } = require('fs');
+const path = require('path');
 
 
 module.exports.get_list = function (dir) {
@@ -25,4 +26,27 @@ module.exports.get_list = function (dir) {
     _get_list(dir);
 
     return dir_list;
+};
+
+module.exports.get_list_json = function (dir) {
+
+    let list_file_info = [];
+
+    const _get_list = function (dir) {
+        readdirSync(dir, 'utf8').forEach(item => {
+            let path_item = path.join(dir, item);
+            let stats = statSync(path_item);
+            if (!stats.isFile()) { _get_list(path_item); return; }
+            let file_obj = {
+                file_path: dir,
+                file_name: item,
+                file_size: stats.size
+            };
+            list_file_info.push(file_obj);
+        });
+    };
+
+    _get_list(dir);
+
+    return list_file_info;
 };
