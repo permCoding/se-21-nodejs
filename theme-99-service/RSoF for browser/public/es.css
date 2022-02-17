@@ -2,7 +2,7 @@ body {
     background-color: rgb(15, 35, 28);
     color: #dd7;
     font-family: "Comic Sans MS", serif;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 div {
@@ -38,5 +38,23 @@ td {
 }
 
 td.item {
-    height: 40px;
+    height: 36px;
+    text-align: left;
+    padding-left: 15px;
+}
+
+textarea {
+    width: 60%;
+    color: initial;
+    display: inline-block;
+    background-color: rgb(221, 229, 219);
+    resize: vertical;
+    cursor: text;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    font: 500 14px "Courier New";
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(169, 169, 169);
+    padding: 2px;
 }

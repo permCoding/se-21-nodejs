@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="utf-8" />
     <title><%=title%></title>
@@ -9,13 +9,13 @@
 
 <body>
     
-    <br><div><%=heading%></div>
+    <br><div><%=heading%></div><br>
     
     <table class="dialog">
-        <% for (let file of list_files) {%>
+        <% for (let i = 0; i < list_files.length; i++) {%>
         <tr>
             <td class="item">
-                <a href="<%=file.path%>"><%=file.name%></a>
+                <a href="/file/<%=i%>"><%=list_files[i].file_name%></a>
             </td>
         </tr>
         <%} %>

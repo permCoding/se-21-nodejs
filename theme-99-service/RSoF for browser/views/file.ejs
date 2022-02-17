@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="utf-8" />
     <title>Content</title>
@@ -8,16 +8,15 @@
 </head>
 
 <body>
-    
-    <br><div>Content</div><br>
-    
-    <table class="dialog">
-        <tr>
-            <td class="item">
-                <%=content%>
-            </td>
-        </tr>
-    </table>
+
+    <div>
+    <br><%=title%><br><br>
+
+    <textarea rows="40" cols="45" name="text" placeholder="Содержимое файла">
+        <%=content%>
+    </textarea>
+
+    </div>
 
 </body>
 </html>

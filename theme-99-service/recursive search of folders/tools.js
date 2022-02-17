@@ -50,3 +50,30 @@ module.exports.get_list_json = function (dir) {
 
     return list_file_info;
 };
+
+module.exports.get_list_queue = function (dir) {
+
+    let list_file_info = [];
+    let dirs = [dir];
+    let last;
+    let status;
+
+    while (dirs.length > 0) {
+        last = dirs.pop();
+        readdirSync(last, 'utf8').forEach(item => {
+            status = statSync(path.join(last, item));
+            if (status.isFile()) {
+                let file_obj = {
+                    file_path: last,
+                    file_name: item,
+                    file_size: status.size
+                };
+                list_file_info.push(file_obj);
+            } else {
+                dirs.unshift(path.join(last, item));
+            }
+        });
+    }
+
+    return list_file_info;
+};
