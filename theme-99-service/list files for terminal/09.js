@@ -1,7 +1,7 @@
 // версия через очередь
 
-// let files_info = require("./tools").get_list_queue("."); // current dir
-let files_info = require("./tools").get_list_queue(__dirname); // current dir
+let files_info = require("./tools").get_list_queue("."); // current dir
+// let files_info = require("./tools").get_list_queue(__dirname); // current dir
 
 // files_info.sort((a, b) => a.file_path < b.file_path? -1: +1);
 files_info.sort((a, b) => b.file_size - a.file_size);
