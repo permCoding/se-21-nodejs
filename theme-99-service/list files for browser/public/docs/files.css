@@ -1,0 +1,58 @@
+body {
+    background-color: rgb(15, 35, 28);
+    color: #dd7;
+    font-family: "Comic Sans MS", serif;
+    font-size: 18px;
+}
+
+div {
+    text-align: center;
+}
+
+a { 
+    text-decoration: none;
+    color: #dddd77;
+}
+a.hover {
+    text-decoration: none;
+    color: chocolate;
+}
+
+table {
+    width: 60%;
+    background-color: #464;
+    border-width: 1px;
+    border-style: dashed;
+    border-color: yellow;
+    margin: auto;
+}
+
+td {
+    border-color: grey;
+    border-width: 1px;
+    border-style: solid;
+    text-align: center;
+    position: relative;
+    vertical-align: middle;
+    margin: auto;
+}
+
+td.item {
+    height: 40px;
+}
+
+textarea {
+    width: 60%;
+    color: initial;
+    display: inline-block;
+    background-color: white;
+    resize: vertical;
+    cursor: text;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    font: 400 12px Arial;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(169, 169, 169);
+    padding: 2px;
+}
