@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0590096c-c317-4d8a-b0fe-b5a8ccaf933f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/04.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../theme-06-server/00-server/server/server02a.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../theme-06-server/00-server/server/server02a.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0590096c-c317-4d8a-b0fe-b5a8ccaf933f" name="Changes" comment="randomBytes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +53,16 @@
       <updated>1645200364135</updated>
       <workItem from="1645200365775" duration="69000" />
       <workItem from="1645200918021" duration="1186000" />
+      <workItem from="1645202187589" duration="161000" />
     </task>
+    <task id="LOCAL-00001" summary="randomBytes">
+      <created>1645202320893</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1645202320894</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -73,5 +78,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="randomBytes" />
+    <option name="LAST_COMMIT_MESSAGE" value="randomBytes" />
   </component>
 </project>
