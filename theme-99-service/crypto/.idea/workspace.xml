@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0590096c-c317-4d8a-b0fe-b5a8ccaf933f" name="Changes" comment="" />
+    <list default="true" id="0590096c-c317-4d8a-b0fe-b5a8ccaf933f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/04.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../theme-06-server/00-server/server/server02a.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../theme-06-server/00-server/server/server02a.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,7 +29,23 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="15.5.1" />
     <property name="javascript.nodejs.core.library.typings.version" value="15.14.9" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\algop\Documents\GitHub\se-21-nodejs\theme-99-service\crypto" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="04.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/04.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.04.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -36,10 +56,22 @@
       <option name="presentableId" value="Default" />
       <updated>1645200364135</updated>
       <workItem from="1645200365775" duration="69000" />
+      <workItem from="1645200918021" duration="1186000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
