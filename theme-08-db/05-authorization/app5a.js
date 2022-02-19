@@ -13,29 +13,30 @@ const urlencodedParser = express.urlencoded({extended: false});
 app.use('/static', express.static(__dirname + '/static'));
 app.set("view engine", "hbs");
 const file_db = './static/users_hash.json';
+let settings = {
+    user: {
+        username:"username",
+        password:"password"
+    },
+    hint: "Введите логин/пароль"
+};
 
 // обработчики событий
-app.get('/', (req, res) => {
-    res.render("app5.hbs", 
-        {username:"username", password:"password",
-        hint: "Введите логин/пароль"}); 
-});
+app.get('/', (req, res) => { res.render("app5a.hbs", settings)});
 
 app.post("/reg", urlencodedParser, function (req, res) {
     const username = req.body.username;
     const password = req.body.password;
     if ((username === "") || (password === "")) {
-        res.render("app5.hbs", 
-            {username:"username", password:"password",
-            hint: "Не все поля определены"}); 
+        settings.hint = "Не все поля определены";
+        res.render("app5a.hbs", settings);
     }
     else {
         const users = require(file_db);
         let user_check = users.find(user => user.username === username);
         if (user_check !== undefined) {
-            res.render("app5.hbs", 
-                {username:"username", password:"password",
-                hint: "Такой пользователь уже существует"}); 
+            settings.hint = "Такой пользователь уже существует";
+            res.render("app5a.hbs", settings);
         }
         else {
             users.push({"username": username, "password": password});

@@ -14,7 +14,7 @@ app.set("view engine", "hbs");
 
 // обработчики событий
 app.get('/', (req, res) => {
-    res.render("index.hbs", {username:"username", passwors:"password"}); 
+    res.render("app1.hbs", {username:"username", password:"password"});
 });
 
 app.post("/login", urlencodedParser, function (req, res) {
@@ -23,7 +23,7 @@ app.post("/login", urlencodedParser, function (req, res) {
     const users = require('./static/users_hash.json');
     // console.log(username, password);
     let user_check = users.find(user => user.username === username);
-    if (user_check == undefined) {
+    if (user_check === undefined) {
         console.log('Такой пользователь не найден.');
         res.redirect("/");
     }

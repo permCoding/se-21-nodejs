@@ -10,5 +10,9 @@
     {
         "username": "student",
         "password": "$2a$04$5x6//QrTkblHXJBwhm9iJ.Eqqa.m7tCtpmZ7kd.yS0pA9t25yjJOW"
+    },
+    {
+        "username": "test",
+        "password": "$2a$04$FcPDFm3fAkvgHtLxwL.tZOx6QV/Go3Q6XsvYVshejthPdNzuQ9ZDa"
     }
 ]

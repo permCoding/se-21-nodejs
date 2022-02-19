@@ -17,24 +17,24 @@ const file_db = './static/users_hash.json';
 // обработчики событий
 app.get('/', (req, res) => {
     res.render("app5.hbs", 
-        {username:"username", passwors:"password", 
+        {username:"username", password:"password",
         hint: "Введите логин/пароль"}); 
 });
 
 app.post("/reg", urlencodedParser, function (req, res) {
     const username = req.body.username;
     const password = req.body.password;
-    if ((username == "") || (password == "")) {
+    if ((username === "") || (password === "")) {
         res.render("app5.hbs", 
-            {username:"username", passwors:"password", 
+            {username:"username", password:"password",
             hint: "Не все поля определены"}); 
     }
     else {
         const users = require(file_db);
         let user_check = users.find(user => user.username === username);
-        if (user_check != undefined) {
+        if (user_check !== undefined) {
             res.render("app5.hbs", 
-                {username:"username", passwors:"password", 
+                {username:"username", password:"password",
                 hint: "Такой пользователь уже существует"}); 
         }
         else {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
 
 <head>
 	<meta charset="utf-8">
@@ -11,16 +11,17 @@
 <body>
 
     <div id="login-form">
-        <h1>Пройти авторизацию</h1>
+        <h1>Пройти регистрацию</h1>
         <fieldset>
-            <form action="/login" method="post">
+            <form action="/reg" method="post">
                 <input class="field" type="text" placeholder="username" 
-                    id="username" name="username" value="{{username}}" />
+                    id="username" name="username" value="{{user.username}}" />
                 <input class="field" type="password" placeholder="password" 
-                    id="password" name="password" value="{{password}}" />
-                <input type="submit" value="{{button}}">
+                    id="password" name="password" value="{{user.password}}" />
+                <input type="submit" value="Зарегистрировать">
             </form>
         </fieldset>
+        <div class=help>{{hint}}</div>
     </div>
     
 </body>

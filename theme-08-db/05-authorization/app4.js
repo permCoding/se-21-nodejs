@@ -14,20 +14,20 @@ app.set("view engine", "hbs");
 
 // обработчики событий
 app.get('/', (req, res) => {
-    res.render("app4.hbs", {username:"username", passwors:"password"}); 
+    res.render("app4.hbs", {username:"username", password:"password"});
 });
 
 app.post("/reg", urlencodedParser, function (req, res) {
     const username = req.body.username;
     const password = req.body.password;
-    if ((username == "") || (password == "")) {
+    if ((username === "") || (password === "")) {
         console.log("Не все поля определены");
         res.redirect("/");
     }
     else {
         const users = require('./static/users_hash.json');
         let user_check = users.find(user => user.username === username);
-        if (user_check != undefined) {
+        if (user_check !== undefined) {
             console.log('Такой пользователь уже существует.');
             res.redirect("/");
         }

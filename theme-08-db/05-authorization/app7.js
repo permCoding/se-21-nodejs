@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
 app.post("/reg", urlencodedParser, function (req, res) {
     const username = req.body.username;
     const password = req.body.password;
-    if ((username == "") || (password == "")) {
+    if ((username === "") || (password === "")) {
         hbs_reg.hint = "Не все поля определены";
         res.render("app7.hbs", hbs_reg);
     }
@@ -39,7 +39,7 @@ app.post("/reg", urlencodedParser, function (req, res) {
         let query = `SELECT username, password FROM user_data WHERE username = "${username}"`;
         let user_check = sqlite.run(query)[0];
 
-        if (user_check != undefined) {
+        if (user_check !== undefined) {
             hbs_reg.hint = "Такой пользователь уже существует";
             res.render("app7.hbs", hbs_reg);
         }
@@ -52,7 +52,7 @@ app.post("/reg", urlencodedParser, function (req, res) {
                 console.log(`Всего записей в БД - ${resp}`); // для контроля
                 res.render("edit.hbs", { username: username, result: "зарегистрирован" });
             });
-        };
+        }
 
         sqlite.close();
     }

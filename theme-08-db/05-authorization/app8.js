@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
 app.post("/reg", urlencodedParser, function (req, res) {
     const username = req.body.username;
     const password = req.body.password;
-    if ((username == "") || (password == "")) {
+    if ((username === "") || (password === "")) {
         hbs_aut.hint = "Не все поля определены";
         res.render("app7.hbs", hbs_aut);
     }
@@ -39,7 +39,7 @@ app.post("/reg", urlencodedParser, function (req, res) {
         let query = `SELECT username, password FROM user_data WHERE username = "${username}"`;
         let user_check = sqlite.run(query)[0];
 
-        if (user_check == undefined) {
+        if (user_check === undefined) {
             hbs_aut.hint = "Такой пользователь не найден";
             res.render("app7.hbs", hbs_aut);
         }
@@ -47,8 +47,8 @@ app.post("/reg", urlencodedParser, function (req, res) {
             let password_check = bcrypt.compareSync(password, user_check.password);
             if (password_check) {
                 res.render("edit.hbs", { username: username, result: "авторизован" });
-            };
-        };
+            }
+        }
 
         sqlite.close();
     }

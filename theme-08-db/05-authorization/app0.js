@@ -13,7 +13,8 @@ app.set("view engine", "hbs");
 
 // обработчики событий
 app.get('/', (req, res) => {
-    res.render("index.hbs", {username:"username", passwors:"password"}); 
+    let user = {username:"username", password:"password", button: "Enter"};
+    res.render("app0.hbs", user);
 });
 
 app.post("/login", urlencodedParser, function (req, res) {
