@@ -34,7 +34,7 @@ server.on('request', (req, res) => {
             });
             break;    
         default:
-            res.writeHead(404, { 'Content-Type': 'text/plain'});
+            res.writeHead(404, {'Content-Type': 'text/plain'});
             res.end('404 Файл не найден');
             break; 
     }
