@@ -1,10 +1,11 @@
 // подключение внешних зависимостей
 const express = require('express');
+const helmet = require('helmet'); // для снижения атак
 
 // подключение своих модулей
-const params = require('./public/config.json').debug;
-const { server_info } = require('./public/utils.js');
-const { get_list_files, get_list_pdf } = require('./public/tools');
+const params = require('./config.json').debug;
+const { server_info } = require('./js/utils.js');
+const { get_list_files, get_list_pdf } = require('./js/tools');
 const { readFileSync } = require('fs');
 const path = require('path');
 
@@ -20,7 +21,9 @@ const dirs = ["docs", "pdf"].map(item => path.join(dir_public, item));
 
 // настройка приложения
 const app = express();
+app.use(helmet.hidePoweredBy()); // для сокрытия http-заголовка X-Powered-By: Express
 app.use('/public', express.static('public'));
+app.use('/css', express.static('css'));
 // app.use('/files', express.static('public/docs')); // serve the actual files
 app.set('view engine', 'ejs'); // npm i ejs
 
