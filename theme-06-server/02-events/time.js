@@ -1,4 +1,4 @@
-exports.get_data_time = (prm="dt") => {
+module.exports.get_data_time = (prm="dt") => {
     
     let date_ob = new Date();
 

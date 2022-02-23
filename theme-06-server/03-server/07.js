@@ -13,7 +13,7 @@ server.on('request', (req, res) => {
     let dir = './es_multi';
     let url = req.url;
     let ext = path.parse(url).ext;
-    if (ext == '') url = '/index.html';
+    if (ext === '') url = '/index.html';
     
     let content = fs.readFileSync(dir + url, 'utf8');
     res.writeHead(200, {'Content-Type': 'text/' + dict[ext]});

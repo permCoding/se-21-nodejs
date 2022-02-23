@@ -37,7 +37,7 @@ server.on('request', (req, res) => {
             res.writeHead(404, { 'Content-Type': 'text/plain'});
             res.end('404 Файл не найден');
             break; 
-    };
+    }
 });
 
 server.listen(3000, () => console.log('Server on 3000'));

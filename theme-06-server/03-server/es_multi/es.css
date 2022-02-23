@@ -1,7 +1,7 @@
 body {
     background-color: rgb(15, 35, 28);
     color: #dd7;
-    font-family: "Comic Sans MS";
+    font-family: "Comic Sans MS", serif;
     font-size: 24px;
 }
 table {

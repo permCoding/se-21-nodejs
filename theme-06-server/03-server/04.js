@@ -21,7 +21,6 @@ const html = `
                 <td class="answer" id="answer1">Вариант ответа</td>
             </tr>
         </table>
-        <script src="es.js"></script> <!--машина вывода-->
     </body>
     </html>
 `;
@@ -62,37 +61,21 @@ const css = `
     }
 `;
 
-const js = `
-    let colors = ['#464', '#777']; // массив цветов выкл/вкл
-    document
-        .querySelectorAll('#dialog .answer') // найти массив ячеек таблицы с ответами
-        .forEach(td_answer => { // для каждой ячейки назначить обработчики событий
-            td_answer.addEventListener('mouseenter', () => td_answer.style.backgroundColor = colors[1]);
-            td_answer.addEventListener('mouseleave', () => td_answer.style.backgroundColor = colors[0]);
-        });
-`;
-
 const server = http.createServer();
 
 server.on('request', (req, res) => {
-    switch (req.url) {
-        case '/':
-            res.writeHead(200, { 'Content-Type': 'text/html'});
-            res.end(html);
-            break;
-        case '/es.css':
-            res.writeHead(200, { 'Content-Type': 'text/css'});
-            res.end(css);
-            break;
-        case '/es.js':
-            res.writeHead(200, { 'Content-Type': 'text/javascript'});
-            res.end(js);
-            break;
-        default:
-            res.writeHead(404, { 'Content-Type': 'text/plain'});
-            res.end('404 Страница не найдена');
-            break; 
-    };
+    if (req.url === '/') {
+        res.writeHead(200, { 'Content-Type': 'text/html'});
+        res.end(html);    
+    }
+    if (req.url === '/es.css') {
+        res.writeHead(200, { 'Content-Type': 'text/css'});
+        res.end(css);    
+    }
 });
 
 server.listen(3000, () => console.log('Server on 3000'));
+
+
+
+
