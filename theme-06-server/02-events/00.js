@@ -14,4 +14,4 @@ server.on("listening", () => console.log(`listening: ${server.address().port}`))
 server.listen(3000);
 
 // отслеживайте реацию приложения на события
-// есть мнение, что второй request браузер делает за favicon.ico
+// есть мнение, что второй request браузер делает для favicon.ico

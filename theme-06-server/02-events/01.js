@@ -1,13 +1,19 @@
 const http = require("http");
 
-const server = http
-    .createServer((req, res) => res.end('- start server'))
-    .listen(3000);
+let count = 0; // глобальная переменная
 
-server.on('close', function() {
-    console.log('- stop server');
-});
+// создали объект сервера
+const server = http.createServer((req, res) => res.end('start server\nbrowser view'));
 
-process.on('SIGINT', function() {
-    server.close();
-});
+// назначили обработчики событий
+server.on("error", err => console.log(`error: ${err}`));
+
+server.on("request", () => console.log(`request: ${++count}`));
+
+server.on("listening", () => console.log(`listening: http://127.0.0.1:${server.address().port}`));
+
+// запустили сервер
+server.listen(3000);
+
+// отслеживайте реацию приложения на события
+// есть мнение, что второй request браузер делает для favicon.ico

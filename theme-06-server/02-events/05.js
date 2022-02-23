@@ -6,7 +6,7 @@ let ts_start;
 function intervalFunc() {
     let current = get_dt("s");
     console.log(`Текущее время: ${current}`);
-};
+}
 
 const intervalObj = setInterval(intervalFunc, 1000); // в миллисекундах
 
@@ -25,7 +25,7 @@ const server = http
 
 server.on('close', () => { // назначим обработчик события
     console.log('-- Сервер остановлен ---');
-    process.exit();
+    process.exit(1);
 });
 
 process.on('SIGINT', function() {
