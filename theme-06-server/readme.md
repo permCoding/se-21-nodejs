@@ -5,6 +5,13 @@ https://metanit.com/web/nodejs/3.1.php
 http://code.mu/ru/javascript/nodejs/book/prime/server/response/  
 https://developer.mozilla.org/ru/docs/Web/HTTP/Status/200  
 
+---  
+
+http методы - аналоги SELECT, INSERT, DELETE, UPDATE
+- это GET, POST, DELETE, PUT
+
+---  
+
 server response answers
 
 range	use
