@@ -7,20 +7,24 @@ https://developer.mozilla.org/ru/docs/Web/HTTP/Status/200
 
 ---  
 
-http методы - аналоги SELECT, INSERT, DELETE, UPDATE
-- это GET, POST, DELETE, PUT
+| http методы | аналоги |
+| :-: | :-: |
+| GET | SELECT |
+| POST | INSERT |
+| DELETE | DELETE |
+| PUT | UPDATE |
 
 ---  
 
-server response answers
+server response answers:  
+| range | use |
+| :-: | :-: |
+| 1xx | information |
+| 2xx | success |
+| 3xx | redirection |
+| 4xx | client errors |
+| 5xx | server errors |
 
-range	use
- 1__	information
- 2__	success
- 3__	redirection
- 4__	client errors
- 5__	server errors
- 
  ---  
  
  Для автоматического перезапуска сервера после внесения изменений в файлы проекта:
