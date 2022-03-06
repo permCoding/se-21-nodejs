@@ -1,45 +1,42 @@
-# se-21-nodejs
-software engineering 2021-2022
+# se-21-nodejs  
 
-### Лекции дистанционно тут:  
+software engineering 21-22  
 
-[Кабинет Программная инженерия - bbb6](https://bbb6.psaa.ru/b/76k-oto-gpt-xpb)  
+**useful links**  
+[Дистант | Программная инженерия - bbb6](https://bbb6.psaa.ru/b/76k-oto-gpt-xpb)  
 [Рейтинг группы ПИб-3](https://docs.google.com/spreadsheets/d/1V9An642lHUishsy4kFHOG-jd8mUmNjvBxWirgjTjjVs/edit?usp=sharing)  
+[**КУРСОВОЙ ПРОЕКТ**](https://github.com/permCoding/se-21-nodejs/tree/main/CourseProject)  
+[ГОСТ по Алгоритмам](https://pcoding.ru/gost/GOST_19.701-90_%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B.pdf)  
+Пример курсовика: http://coding.1gb.ru/  
+
+Объём учебной дисциплины:  
+| семестр | Лекций | ЛабРаб | Отчётность |
+| :-: | :-: | :-: | :-: |
+| 1 | 12 | 9 | Зачёт + КП |
+| 2 | 12 | 9 | Экзамен |
 
 ---  
 
-[**КУРСОВОЙ ПРОЕКТ**](https://github.com/permCoding/se-21-nodejs/tree/main/CourseProject)  
+## Установить  
 
-Объём учебной дисциплины  
-(семестр 1 - nodejs): Лекций - 12; л/р - 9; Зачёт + КП  
-(семестр 2 - C#): Лекций - 12; л/р - 9; Экзамен    
-Пример курсовика: http://coding.1gb.ru/  
-  
---- 
-
-### Установить:  
 [Node.js](https://nodejs.org/)  
 [VS Code](https://code.visualstudio.com/)  
-[Горячие клавиши VSCode](VSCodeHotKeys.md)  
-Расширение Node.js Exec (запуск программы F8)  
+[Горячие клавиши VSCode](docs/VSCodeHotKeys.md)  
+Расширение для VSCode - Node.js Exec (запуск программы F8)  
+[WebStorm](https://www.jetbrains.com/ru-ru/webstorm/)  
 
 ```js
-// Установка доп-ных пакетов:  
+// Установка пакетов:  
 npm install название-пакета  
 // или сокращённо:  
 npm i название-пакета  
 ```
 
---- 
-
-### useful links  
-
-[ГОСТ по Алгоритмам](https://pcoding.ru/gost/GOST_19.701-90_%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B.pdf)  
-
 ---  
 
 ## ЛЕКЦИИ  
 
+Семестр 1  
 Лекция 01 - 14.10.21 - [Программная инженерия](https://docs.google.com/presentation/d/1fJ3FA3rolKLPQhsjJaUgCpl53H-k6FthlGoa6kzm3bs/edit?usp=sharing)  
 Лекция 02 - 14.10.21 - [Введение](https://github.com/permCoding/se-21-nodejs/tree/main/theme-01-io)  
 Лекция 03 - 28.10.21 - [Модули в Node.js - Видео-запись Лекции в BBB](https://bbb6.psaa.ru/playback/presentation/2.3/f4fd494c27cf032e06779c00db49cb30d43675a7-1635396294019)  
@@ -56,75 +53,20 @@ npm i название-пакета
 ---  
 
 Семестр 2  
-Лекция 13 - 23.12.21 - [async](https://github.com/permCoding/se-21-nodejs)  
-Лекция 14 - 23.12.21 - [sql](https://github.com/permCoding/se-21-nodejs)  
-Лекция 15 - 23.12.21 - [express](https://github.com/permCoding/se-21-nodejs)  
+Лекция 01 - __.__.22 - [server](https://github.com/permCoding/se-21-nodejs/part-2/themes)  
+Лекция 02 - __.__.22 - [routing](https://github.com/permCoding/se-21-nodejs/part-2/themes)  
+Лекция 03 - __.__.22 - [express](https://github.com/permCoding/se-21-nodejs/part-2/themes)  
+Лекция 04 - __.__.22 - [middleware](https://github.com/permCoding/se-21-nodejs/part-2/themes)  
+Лекция 05 - __.__.22 - [sql](https://github.com/permCoding/se-21-nodejs/part-2/themes)  
+Лекция 06 - __.__.22 - [class](https://github.com/permCoding/se-21-nodejs/part-2/themes)  
+Лекция 07 - __.__.22 - [listfolders](https://github.com/permCoding/se-21-nodejs/part-2/themes)  
+Лекция 08 - __.__.22 - [csv](https://github.com/permCoding/se-21-nodejs/part-2/themes)  
 
 ---  
 
-## ЛАБРАБ  
-
-**Лабораторка 01**  
-Задание 1.  
-Пользователь вводит в консоли с клавиатуры число вещественное из диапазона [0; 100].  
-Программа должна перевести его в двоичную систему счисления.  
-Нужно подготовить блок-схему алгоритма в diagrams.net  
-Задание 2.  
-И написать программу на Node.js  
-
-**Лабораторка 02**  
-Задание 1.  
-Написать функцию на Node.js, которая на вход получает строку с целыми числами, записанными через пробел, а на выход возвращает сумму этих чисел.  
-Нужно выполнить задание без использования функционального стиля (без split, map, filter, reduce).  
-Можно использовать циклы for или while, условия if и массивы.  
-За основу можете взять разбор программы, сделанной во время Лекции и размещённой в папке [labrab-02](https://github.com/permCoding/se-21-nodejs/tree/main/labrabs/labrab-02)  
-
-```js
-// это шаблон программы
-
-line = "100 200      3 5 6 999";
-
-arr_s = f_split(line);
-arr_n = f_map(arr_s);
-arr_f = f_filter(arr_n);
-sum = f_sum(arr_f);
-
-console.log(sum);
-```
-
-**Лабораторка 03**  
-Обработка массивов  
-[Видео-запись - как решать задачи на JS на Степике](https://bbb6.psaa.ru/playback/presentation/2.3/f4fd494c27cf032e06779c00db49cb30d43675a7-1636701464659)  
-Решать задачи следует тут: https://stepik.org/lesson/416145/step/1?unit=405659  
-Обязательное требование: **решать в функциональном стиле (map, filter, reduce)**.  
-[Примеры оформления программного кода для Степика](https://github.com/permCoding/se-21-nodejs/tree/main/labrabs/labrab-03-stepik)  
-Срок решения до начала следующей лабораторки...  
-
-**Лабораторка 04**  
-Обработка JSON массивов  
-[Задания для самостоятельного исполнения](https://github.com/permCoding/se-21-nodejs/tree/main/labrabs/labrab-04-json)  
-Обязательное требование: решать в функциональном стиле.  
-[Примеры оформления программного кода из Лекции про JSON](https://github.com/permCoding/se-21-nodejs/tree/main/theme-04-objects/02-json)  
-Срок решения до начала следующей лабораторки...  
-
-**Лабораторка 05**  
-Класс для машины вывода Экспертной системы  
-[Задания для самостоятельного исполнения](https://github.com/permCoding/se-21-nodejs/tree/main/labrabs/labrab-05-class-es)  
-
-Разработать консольное приложение **"Экспертная система с мультидеревом выбора"**.  
-
-Требования и рекомендации по выполнению заданий  
-> ✔ данные для экспертной системы должны храниться в отдельном файле в формате json, включая заголовок экспертной системы, вопросы и ответы (data.json)  
-> ✔ программа разбита на модуль с классом экспертной системы (es.js) и главный файл запуска кнсольного приложения (app.js)  
-> ✔ класс экспертной системы поддерживает работу с мультидеревом выбора решений  
-> ✔ в классе есть метод вывода в консоль меню ответов на текущий вопрос с дополнительным пунктом выхода из приложения  
-> ✔ в классе есть конструктор для инициализации значений данных мультидерева  
-> ✔ в классе есть методы вывода заголовка экспертной системы и организации диалога с пользователем  
-> ✔ в основной программе при запуске создаёте объект экспертной системы, затем печатаете заголовок и запускаете диалог, после диалога так же в основной программе печатаете результат  
-> ✔ при необходимости можете добавить свой функционал  
-
-[Примеры, шаблоны решения можно брать из программ Лекции про Экспертную систему](https://github.com/permCoding/se-21-nodejs/tree/main/theme-05-expsist)  
-
 ```txt
-
+Про разметку md:  
+https://github.com/sandino/Markdown-Cheatsheet/blob/master/README.md  
+Проба md:  
+https://markdown-here.com/livedemo.html  
 ```
