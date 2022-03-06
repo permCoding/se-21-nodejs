@@ -1,6 +1,13 @@
 # se-21-nodejs
 software engineering 2021-2022
 
+### Лекции дистанционно тут:  
+
+[Кабинет Программная инженерия - bbb6](https://bbb6.psaa.ru/b/76k-oto-gpt-xpb)  
+[Рейтинг группы ПИб-3](https://docs.google.com/spreadsheets/d/1V9An642lHUishsy4kFHOG-jd8mUmNjvBxWirgjTjjVs/edit?usp=sharing)  
+
+---  
+
 [**КУРСОВОЙ ПРОЕКТ**](https://github.com/permCoding/se-21-nodejs/tree/main/CourseProject)  
 
 Объём учебной дисциплины  
@@ -23,15 +30,10 @@ npm install название-пакета
 npm i название-пакета  
 ```
 
----  
-
-### Лекции дистанционно тут:  
-
-[Кабинет Программная инженерия - bbb6](https://bbb6.psaa.ru/b/76k-oto-gpt-xpb)  
 --- 
 
 ### useful links  
-[Рейтинг группы ПИб-3](https://docs.google.com/spreadsheets/d/1V9An642lHUishsy4kFHOG-jd8mUmNjvBxWirgjTjjVs/edit?usp=sharing)  
+
 [ГОСТ по Алгоритмам](https://pcoding.ru/gost/GOST_19.701-90_%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B.pdf)  
 
 ---  
