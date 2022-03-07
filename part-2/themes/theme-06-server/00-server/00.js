@@ -1,26 +1,16 @@
-const http = require("http")
+const http = require("http");
 
 const server = http.createServer();
 
-let contenttype = {
-    "Content-Type": "text/html"
-};
-
 const request = (req, res) => {
-    res.writeHead(200, contenttype);
-    let br = (req.url == "/line")? '\n': "<br>";
-    res.write("- server -");
-    res.write(br);
-    res.end("- test -");
+    res.writeHead(200, {"Content-Type": "text/html"} );
     console.log("request");
+    res.write(" =========== ");
+    res.write('<br>');
+    res.write("<h2>- server -</h2>");
+    res.end();
 };
 
-const listening = () => {
-    console.log(server.address().port);
-};
-
-server.listen(3000);
+server.listen(3000, () => console.log("Сервер запущен"));
 
 server.on("request", request);
-
-server.on("listening", listening);
