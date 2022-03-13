@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>server</title>
+    <style>
+        body {
+            font-family: "Courier New", serif;
+            font-size: 24px;
+            background-color: gray;
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            margin: auto;
+            width: 94%;
+            align-content: center;
+            font-weight: bold;
+        }
+        td {
+            text-align: center;
+            background-color: yellowgreen;
+            border-width: 1px;
+            border-color: darkseagreen;
+            border-style: solid;
+            border-radius: 3px;
+            width: 33%;
+        }
+        .body {
+            text-align: center;
+            font-weight: bolder;
+        }
+        a {
+            color: darkblue;
+            text-decoration: none;
+        }
+        a:hover {
+            color: darkred;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <table>
+            <tr>
+                <td class="menu"><a href="index.html">about</a></td>
+                <td class="menu"><a href="content.html">content</a></td>
+                <td class="menu"><a href="contacts.html">contacts</a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="body">
+        <br>ОБ ОРГАНИЗАЦИИ
+    </div>
+
+    <script>
+        const colors = ['yellow', 'yellowgreen']; // массив цветов выкл/вкл
+        document
+            .querySelectorAll('.menu') // найти массив ячеек таблицы
+            .forEach(td => { // для каждой ячейки назначить обработчики событий
+                td.addEventListener('mouseenter', () => td.style.backgroundColor = colors[0]);
+                td.addEventListener('mouseleave', () => td.style.backgroundColor = colors[1]);
+            });
+    </script>
+
+</body>
+</html>
