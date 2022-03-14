@@ -1,13 +1,13 @@
 const http = require("http");
 
 const request = (req, res) => {
-    res.writeHead(200, {"Content-Type": "text/html"} );
+    res.writeHead(200, {"Content-Type": "text/html; charset=utf-8"} );
     let url = req.url;
     if ((url === "/index.html") || (url === "/")) {
-        res.write("1111111111");
+        res.write("капусТА");
     }
     else {
-        res.write("2222222222");
+        res.write("коМАр");
     }
     res.end();
 };
