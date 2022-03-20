@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>СЕРВЕР</title>
+    <link rel="stylesheet" type="text/css" href="/public/style.css" />
+    <link rel="shortcut icon" href="/public/favicon.ico" />
+</head>
+<body>
+    <% if (true_page) { %>
+    <div class="header">
+        <table>
+            <tr>
+                <td class="menu"><a href="index">index</a></td>
+                <td class="menu"><a href="content">content</a></td>
+                <td class="menu"><a href="contacts">contacts</a></td>
+            </tr>
+        </table>
+    </div>        
+    <% } %>
+    
+    <div class="body">
+        <br><%=text%>
+    </div>
+
+    <script src="/public/tools.js"></script> <!--вспомогательные функции-->
+</body>
+</html>
