@@ -12,7 +12,7 @@ const server = http.createServer();
 server.on("request", (req, res) => {
     res.setHeader('Content-Type', 'text/html');
     
-    let page_path = '';
+    let page_path = ''; // адрес html-страницы
     console.log(req.url);
     switch (req.url) {
         case '/':

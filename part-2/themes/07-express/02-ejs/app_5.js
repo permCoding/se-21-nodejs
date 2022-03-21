@@ -26,6 +26,7 @@ app.use((req, res, next) => {
 }); // middleware
 
 app.get(["/", "/index"], (req, res) => {
+    data_render.title = "=BOSS=";
     data_render.text = "ОБ ОРГАНИЗАЦИИ";
     res.render(get_url("index"), data_render);
 });

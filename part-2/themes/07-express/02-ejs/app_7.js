@@ -63,6 +63,11 @@ app.use((req, res, next) => { // подготовка данных
     next();
 });
 
+app.use((req, res, next) => {
+    console.log("next");
+    next();
+});
+
 // контроллеры mvc
 app.get(pages, (req, res) => 
     res.render(path.join(__dirname, "views_7", "index.ejs"), data_render)

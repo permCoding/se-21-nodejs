@@ -19,7 +19,7 @@ app.listen(3000);
 
 app.get(["/", "/index"], (req, res) => {
     res.render(get_url("index"), {
-        title: "server",
+        title: "ГЛАВНАЯ",
         items: ["index", "content", "contacts"],
         text: "ОБ ОРГАНИЗАЦИИ"
     });
