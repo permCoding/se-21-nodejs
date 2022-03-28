@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Оставить отзыв</title>
+    <link rel="stylesheet" type="text/css" href="/static/feedback.css" />
+    <link rel="shortcut icon" href="/static/favicon.ico" />
+</head>
+
+<body>
+    
+    <br>
+    <div id="inline">
+
+    <a href="/">НА ГЛАВНУЮ</a>
+
+    <h2>Форма онлайн отзыва</h2>
+
+    <form action="/feedback" method="post">
+        <input id="name" class="txt" name="name" type="name" placeholder="Ваше имя">
+        <textarea id="feed" class="txtarea" name="feed" placeholder="Ваш отзыв:"></textarea>
+        <button id="send">Отправить отзыв</button>
+    </form>
+    
+    </div>
+
+</body>
+</html>
