@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title><%=title%></title>
+    <link rel="stylesheet" type="text/css" href="/public/feedback.css" />
+    <link rel="shortcut icon" href="/public/favicon.ico" />
+</head>
+
+<body>
+    
+    <br>
+    <div id="inline">
+    <h2><%=heading%></h2>
+    <form action="/feedback" method="post">
+        <input id="name" class="txt" name="name" type="name" placeholder="Ваше имя">
+        <textarea id="feed" class="txtarea" name="feed" placeholder="Ваш отзыв:"></textarea>
+        <button id="send"><%=button%></button>
+    </form>
+    
+    <form>
+        <button id="back" type="submit" formaction="/">Вернуться</button>
+    </form>
+    </div>
+
+</body>
+</html>

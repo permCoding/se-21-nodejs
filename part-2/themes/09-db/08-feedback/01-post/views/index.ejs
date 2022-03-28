@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Отзывы о продукте</title>
+    <link rel="stylesheet" type="text/css" href="/public/feedback.css" />
+    <link rel="shortcut icon" href="/public/favicon.ico" />
+</head>
+
+<body>
+    
+    <br>
+    <div id="inline">
+        <br>
+        <form action="/feedback" method="get">
+            <button id="send">Оставить новый отзыв</button>
+        </form>
+        <h4>Отзывы</h4>
+        <table>
+            <tr>
+                <th>Дата/Время</th>
+                <th>Имя</th>
+                <th>Отзыв</th>
+            </tr>
+        <% for (let feed of feeds) {%>
+            <tr>
+                <td class="name"><%=feed.date_time%></td>
+                <td class="name"><%=feed.name%></td>
+                <td class="feed"><%=feed.feed%></td>
+            </tr>
+        <%} %>
+        </table>
+        <br>
+    </div>
+
+</body>
+</html>
