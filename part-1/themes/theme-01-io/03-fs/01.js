@@ -8,3 +8,13 @@ let dir_name = path.dirname(__filename)
 
 console.log(dir_name)
 console.log(file_name, file_ext)
+
+fs.readFile(file_name, (err, data) => { // асинхронно
+    if (err) console.error(err)
+    else {
+        console.log(data.toString())
+    }
+})
+
+content = fs.readFileSync(file_name, "utf8")
+fs.writeFileSync(`_${file_name}`, content)
