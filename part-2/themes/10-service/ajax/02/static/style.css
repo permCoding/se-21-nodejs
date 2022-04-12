@@ -1,0 +1,14 @@
+body {
+    background-color: lemonchiffon;
+    font-size: medium;
+}
+table {
+    width: 300px;
+}
+th {
+    border: brown 1px dashed;
+}
+td {
+    text-align: center;
+    border: 1px solid green;
+}
