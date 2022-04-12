@@ -11,13 +11,7 @@ let get_flat_arr = (array) => {
     return flat_array
 }
 
-let arr = [
-    0,
-    [10],
-    666,
-    [[[9]], 111],
-    333
-]
+let arr = [0, [10], 666, [[[9]], 111], 333]
 
 let flat_arr = get_flat_arr(arr).sort((a, b) => a - b)
 

@@ -14,12 +14,6 @@ let get_flat_arr = (array) => {
     return flat_array
 }
 
-let arr = [
-    0,
-    [],
-    666,
-    [[[9]], 111],
-    333
-]
+let arr = [0, [], 666, [[[9]], 111], 333]
 
 console.table(get_flat_arr(arr))
