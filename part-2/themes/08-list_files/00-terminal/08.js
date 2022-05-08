@@ -24,5 +24,6 @@ let print_files_2 = function () {
 }
 
 
-print_files_1();
-// print_files_2();
+process.stdout.write('\x1Bc');
+// print_files_1();
+print_files_2();

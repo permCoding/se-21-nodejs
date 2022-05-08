@@ -1,6 +1,7 @@
-const fs = require('fs');
+// Асинхронное чтение списка файлов
+// и стат данных про файлы
 
-let dir_list = [];
+const fs = require('fs');
 
 const get_list = function (dir, tab=0) {
     fs.readdir(dir, function (err, items) {
@@ -26,9 +27,8 @@ const get_list = function (dir, tab=0) {
 };
 
 
-
-let dir_app = __dirname;
-get_list(dir_app);
+let dir_list = [];  // сюда будем заполнять
+get_list(__dirname);
 dir_list.forEach(line => console.log(line));
 // так не будет работать, так как асинхронно
-// список будет ещё пустым
+// и список будет ещё пустым

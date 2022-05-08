@@ -3,9 +3,6 @@ const path = require('path');
 
 
 module.exports.get_list = function (dir) {
-
-    let dir_list = [];
-
     const _get_list = function (dir, tab = 0) {
         let items = readdirSync(dir, 'utf8');
 
@@ -23,15 +20,12 @@ module.exports.get_list = function (dir) {
         });
     };
 
+    let dir_list = [];
     _get_list(dir);
-
     return dir_list;
 };
 
 module.exports.get_list_json = function (dir) {
-
-    let list_file_info = [];
-
     const _get_list = function (dir) {
         readdirSync(dir, 'utf8').forEach(item => {
             let path_item = path.join(dir, item);
@@ -46,8 +40,8 @@ module.exports.get_list_json = function (dir) {
         });
     };
 
+    let list_file_info = [];
     _get_list(dir);
-
     return list_file_info;
 };
 

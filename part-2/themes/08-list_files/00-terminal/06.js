@@ -1,10 +1,9 @@
+// синхронно и удобнее оформлено с return
+
 const fs = require('fs');
 
 
 const get_list = function (dir) {
-
-    let dir_list = [];
-
     const _get_list = function (dir, tab = 0) {
         let items = fs.readdirSync(dir, 'utf8');
 
@@ -22,12 +21,11 @@ const get_list = function (dir) {
         });
     };
 
+    let dir_list = [];
     _get_list(dir);
-
     return dir_list;
 };
 
 
 let dir_list = get_list(__dirname);
-
 dir_list.forEach(line => console.log(line));
