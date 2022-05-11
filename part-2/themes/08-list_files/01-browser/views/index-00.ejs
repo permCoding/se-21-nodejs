@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/css/es.css" />
+    <link rel="shortcut icon" href="/css/favicon.ico" />
+</head>
+
+<body>
+    
+    <br>
+
+    <table class="dialog">
+        <% for (let i = 0; i < list_files.length; i++) {%>
+        <tr>
+            <td class="item">
+                <a href="/file/docs/<%=i%>"><%=list_files[i].file_name%></a>
+            </td>
+        </tr>
+        <%} %>
+    </table>
+
+</body>
+</html>
