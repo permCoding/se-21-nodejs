@@ -25,10 +25,9 @@ app.get('/', function (req, res) {
 
 app.get(`/${dir_files}/:id`, (req, res) => {
     const id = Number(req.params.id);
-    let file_name = model_data.list_files[id].file_name;
-    let file_path = model_data.list_files[id].file_path;
-    let file_path_name = path.join(file_path, file_name);
-    let content = readFileSync(file_path_name, 'utf-8');
+    const file_name = model_data.list_files[id].file_name;
+    let file_path = path.join("public", dir_files, file_name);
+    let content = readFileSync(file_path, 'utf-8');
     res.render('file', { content: content, title: file_name });
 });
 
