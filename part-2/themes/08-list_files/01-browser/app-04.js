@@ -14,12 +14,14 @@ const dir_files = "docs";
 // паттерн проектирования MVC
 
 // model data
-const {model_data, get_list_files} = require("./models/model");
+const model_data = require("./models/model").model_data;
+// const get_list = require("./models/model").get_list_files;
+const get_list = require("./models/model").get_list_files_full;
 const {readFileSync} = require("fs");
 
 // controller
-app.get('/', function (req, res) {
-    model_data.list_files = get_list_files(path.join("public", dir_files));
+app.get('/', (req, res) => {
+    model_data.list_files = get_list(path.join("public", dir_files));
     res.render('index-03', model_data);
 });
 

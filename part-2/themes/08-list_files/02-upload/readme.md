@@ -1,5 +1,11 @@
 # upload
 
+в этой папке примеры программ по загрузке файлов на сервер с использованием двух библиотек:  
+1) express-fileupload  
+2) multer  
+
+- ещё немного примеров:
+  
 ```js
 const file = req.files.myFile;
 const extensionName = path.extname(file.name); // fetch the file extension

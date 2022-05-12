@@ -13,7 +13,7 @@ const dir_files = path.join("public", "docs");
 // паттерн проектирования MVC
 
 // model data
-const {model_data, get_list_files} = require("./models/model");
+const {model_data, get_list_files} = require("./models/model"); // или get_list_files_full
 
 // controller
 app.get('/', function (req, res) {
