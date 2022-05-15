@@ -32,7 +32,7 @@ const get_list_files = (dir) => {
 };
 
 // controller - обработчики событий - запрос-ответ
-app.get(['/'], function (req, res) {
+app.get('/', function (req, res) {
     model_data.list_files = get_list_files(dir_files);
     res.render('index-01', model_data);
 });
