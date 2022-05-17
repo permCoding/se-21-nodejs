@@ -1,6 +1,7 @@
 // подключение зависимостей
 const express = require('express');
 const path = require('path');
+const {readFileSync,statSync} = require('fs')
 
 // настройка приложения
 const app = express();
@@ -14,23 +15,32 @@ const dir_files = "docs";
 // паттерн проектирования MVC
 
 // model data
-const model_data = require("./models/model").model_data;
-// const get_list = require("./models/model").get_list_files;
-const get_list = require("./models/model").get_list_files_full;
-const {readFileSync} = require("fs");
+let model_data = {
+    title: "List of files",
+    heading: "Список файлов",
+    list_files: [], // тут будет список объектов про файлы
+};
+
+const get_list = (dir) => {
+    return require("fs")
+        .readdirSync(dir, 'utf8') // всё содержимое папки dir
+        .filter(item => statSync(path.join(dir, item)).isFile())
+        .map(item => path.join(__dirname,dir,item));
+};
 
 // controller
 app.get('/', (req, res) => {
     model_data.list_files = get_list(path.join("public", dir_files));
-    res.render('index-03', model_data);
+    res.render('index-05', model_data);
 });
 
 app.get(`/${dir_files}/:id`, (req, res) => {
     const id = Number(req.params.id);
-    let file_name = model_data.list_files[id].file_name;
-    let file_path = model_data.list_files[id].file_path;
-    let file_path_name = path.join(file_path, file_name);
-    let content = readFileSync(file_path_name, 'utf-8');
+    let file_path_name = model_data.list_files[id];
+    let file_name = path.basename(file_path_name);
+    console.log(file_path_name);
+    console.log(file_name);
+    let content = readFileSync(path.join("public",dir_files,file_name), 'utf-8');
     res.render('file', { content: content, title: file_name });
 });
 

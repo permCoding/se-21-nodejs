@@ -20,19 +20,15 @@ let model_data = {
     list_files: [], // тут будет список объектов про файлы
 };
 
-let get_file_obj = function (dir, item) {
-    return { // формируем объект с данными про файл
-        'file_path': dir, 
-        'file_name': item, 
-        'file_size': statSync(path.join(dir, item)).size
-    }
-};
-
 /* эта функция будет получать список файлов из папки dir с путями к ним и их размерами */
 const get_list_files = (dir) => {
-    return readdirSync(dir, 'utf8') // всё содержимое dir - и файлы и папки
+    return readdirSync(dir, 'utf8') // всё содержимое папки dir
         .filter(item => statSync(path.join(dir, item)).isFile()) // только файлы
-        .map(item => get_file_obj(dir, item)); // возвращаем массив объектов с данными про файлы
+        .map(item => { return { // формируем объекты с данными про файлы
+            'file_path': dir, 
+            'file_name': item, 
+            'file_size': statSync(path.join(dir, item)).size
+        }}); // возвращаем массив объектов с данными про файлы
 };
 
 // controller - обработчики событий - запрос-ответ
