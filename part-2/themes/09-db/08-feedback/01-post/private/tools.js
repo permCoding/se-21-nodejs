@@ -1,11 +1,21 @@
 const fs = require('fs');
-const csvjson = require('csvjson'); // npm i csvjson
 
+// добавим данные в файл
+const append_record = (nameUser, feed) => {
+    let date = new Date();
+    let year = date.getFullYear();
+    let month = date.getMonth()+1;
+    let day = date.getDate();
+    let hour = date.getHours();
+    let min = date.getMinutes();
+    let date_time = `${year}-${month}-${day} ${hour}:${min}`;
+	feed = feed.replace(/(\r\n|\n|\r)/gm, ' ');
+    let record = `${date_time}|${nameUser}|${feed}\n`;
+    fs.appendFile("./private/feeds.csv", record, (err) => {
+        if (err) return console.error(err);
+    }
+)};
 
-function csv_to_json(nameFile, del='|') {
-	let textCSV = fs.readFileSync(nameFile, { encoding: 'utf8' });
-	return csvjson.toObject(textCSV, { delimiter: del });
+module.exports = {
+	append_record
 }
-
-
-module.exports.csv_to_json = csv_to_json;
