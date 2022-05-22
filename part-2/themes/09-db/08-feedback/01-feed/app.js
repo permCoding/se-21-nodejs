@@ -25,11 +25,11 @@ app.get('/', function (req, res) { // главная страница
     res.render('index', md.md_index); // render view
 });
 
-app.get("/feedback", (req, res) => {
-    res.render("feedback.ejs", md.md_feed); // render view
+app.get('/feedback', (req, res) => {
+    res.render("feedback", md.md_feed); // render view
 });
 
-app.post("/feedback", htmlParser, (req, res) => {
+app.post('/feedback', htmlParser, (req, res) => {
     if (!req.body) return res.sendStatus(400);
     tools.append_record(req.body.name, req.body.feed); // находим по имени в шаблоне
     res.redirect("/"); // возвращаемся на главную

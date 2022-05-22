@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Отзывы о продукте</title>
+    <title><%=title%></title>
     <link rel="stylesheet" type="text/css" href="/static/feedback.css" />
     <link rel="shortcut icon" href="/static/favicon.ico" />
 </head>
@@ -11,10 +11,10 @@
     
     <br>
     <div id="inline">
-        <h2>Отзывы</h2>
+        <h2><%=heading%></h2>
 
         <form action="/feedback" method="get">
-            <button id="send">Оставить новый отзыв</button>
+            <button id="send"><%=button%></button>
         </form>
         <br>
         <h4>Предыдущие отзывы</h4>
@@ -23,12 +23,12 @@
                 <th>Имя</th>
                 <th>Отзыв</th>
             </tr>
-        <% for (let feed of feeds) {%>
+            <% for (let feed of feeds) {%>
             <tr>
                 <td class="name"><%=feed.name%></td>
                 <td class="feed"><%=feed.feed%></td>
             </tr>
-        <%} %>
+            <%} %>
         </table>
     </div>
 
