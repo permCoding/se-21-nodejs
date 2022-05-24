@@ -1,0 +1,14 @@
+[
+    {
+        "login": "abc",
+        "password": "qwerty"
+    },
+    {
+        "login": "admin",
+        "password": "0000"
+    },
+    {
+        "login": "user",
+        "password": "user"
+    }    
+]
