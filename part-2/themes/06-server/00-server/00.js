@@ -5,9 +5,11 @@ const server = http.createServer();
 const request = (req, res) => {
     res.writeHead(200, {"Content-Type": "text/html"} );
     console.log("request");
-    res.write(" =========== ");
-    res.write('<br>');
-    res.write("<h2>- server -</h2>");
+    res.write('<meta charset="utf-8">');
+    res.write('<div style="text-align: center;">');
+    res.write('<h3>The server is running</h3>');
+    res.write('<h2>Сервер запущен</h2>');
+    res.write('</div>');
     res.end();
 };
 
