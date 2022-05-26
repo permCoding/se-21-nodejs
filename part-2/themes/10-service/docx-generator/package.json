@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "docx-templates": "^4.9.2",
+    "generate-docx": "^2.1.1"
+  }
+}
