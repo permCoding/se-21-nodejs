@@ -15,5 +15,5 @@ app.use('/feed', router_feed);
 
 // запуск приложения
 app.listen(params.port, params.hostname, () => {
-    console.log(`> ${params.hostname}:${params.port}/\n> to stop: Ctrl+C`);
+    console.log(`>>> ${params.hostname}:${params.port}/\n>>> to stop: Ctrl+C`);
 });

@@ -12,25 +12,23 @@
     <br>
     <div id="inline">
         <br>
-        <form action="/feed" method="get"> <!-- вызов события /feedback -->
+        <form action="/feed" method="get"> <!-- вызов события /feed -->
             <button id="send"><%=button%></button>
         </form>
+        <br>
         <h4><%=heading%></h4>
         <table>
             <tr>
-                <th>Дата/Время</th>
                 <th>Имя</th>
                 <th>Отзыв</th>
             </tr>
             <% for (let feed of feeds) {%>
             <tr>
-                <td class="name"><%=feed.date_time%></td>
                 <td class="name"><%=feed.name%></td>
                 <td class="feed"><%=feed.feed%></td>
             </tr>
             <%} %>
         </table>
-        <br>
     </div>
 
 </body>

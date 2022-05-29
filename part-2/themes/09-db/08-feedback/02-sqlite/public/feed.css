@@ -1,5 +1,5 @@
 body {
-    background: url(/static/bg.png) repeat ;
+    background: url(/public/bg.png) repeat ;
     font: normal normal 14px/20px Arial, Georgia, serif;
 }
 h2 {
