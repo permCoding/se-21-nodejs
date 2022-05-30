@@ -4,14 +4,6 @@ const htmlParser = express.urlencoded({extended: false});
 const { md_feed } = require('../models/model-feed'); // подключаем модель данных
 const router = express.Router();
 
-const insert_records = (nameFile, nameUser, feedUser) => {
-    sqlite.connect(nameFile); 
-    sqlite.insert("feeds", { name: nameUser, feed: feedUser }, (res) => {
-        if (res.error) throw res.error;
-    });
-    sqlite.close();
-}
-
 router.get('/', (req, res, next) => {
     res.render('feed', md_feed); // render view
 });
