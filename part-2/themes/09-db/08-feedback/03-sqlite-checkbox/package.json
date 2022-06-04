@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "sqlite3": "^5.0.2",
+    "sync-sqlite": "^1.0.3"
+  }
+}

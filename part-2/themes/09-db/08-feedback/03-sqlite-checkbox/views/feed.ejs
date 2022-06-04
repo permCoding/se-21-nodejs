@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title><%=title%></title>
+    <link rel="stylesheet" type="text/css" href="/public/feed.css" />
+    <link rel="shortcut icon" href="/public/favicon.ico" />
+</head>
+
+<body>
+    
+    <br>
+    <div id="inline">
+    <h2><%=heading%></h2>
+    <form action="/feed" method="post"> <!-- вызов события /feed -->
+        <input id="name" class="txt" name="nameUser" type="name" placeholder="Ваше имя">
+        <textarea id="feed" class="txtarea" name="feedUser" placeholder="Ваш отзыв:"></textarea>
+        <button id="send"><%=button%></button>
+    </form>
+    
+    <form> <!-- вызов главной страницы - событие / -->
+        <button id="back" type="submit" formaction="/">Вернуться</button>
+    </form>
+    </div>
+
+</body>
+</html>

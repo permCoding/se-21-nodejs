@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title><%=title%></title>
+    <link rel="stylesheet" type="text/css" href="/public/feed.css" />
+    <link rel="shortcut icon" href="/public/favicon.ico" />
+</head>
+
+<body>
+    
+    <br>
+    <div id="inline">
+        <br>
+        <form action="/feed" method="get"> <!-- вызов события /feed -->
+            <button id="send"><%=button%></button>
+        </form>
+
+        <h4><%=heading%></h4>
+
+        <form action="/del" method="post">
+        <table>
+            <tr>
+                <th>Имя</th>
+                <th>Отзыв</th>
+                <th class="check">
+                    <button id="delete"><%=btnDelete%></button>
+                </th>
+            </tr>
+            <% for (let feed of feeds) {%>
+            <tr>
+                <td class="name"><%=feed.nameUser%></td>
+                <td class="feed"><%=feed.feedUser%></td>
+                <td class="check">
+                    <input 
+                        type="checkbox" 
+                        name="option"
+                        value="<%=feed.uid%>"
+                    >
+                </td>
+            </tr>
+            <%} %>
+        </table>
+        </form>
+        
+        <br>
+    </div>
+
+</body>
+</html>
