@@ -19,14 +19,10 @@ app.get('/', (req, res) => {
 app.post("/login", urlencodedParser, function (req, res) {
     const username = req.body.username;
     const password = req.body.password;
-    const users = require('./static/users.json');
     // console.log(username, password);
+    const users = require('./static/users.json');
     let user_check = users.find(user => user.username === username);
-    if (user_check === undefined) {
-        console.log('Такой пользователь не найден.');
-        res.redirect("/");
-    }
-    else {
+    if (user_check) {
         let password_check = user_check.password === password;
         console.log(password_check);
         if (password_check) {
@@ -36,6 +32,10 @@ app.post("/login", urlencodedParser, function (req, res) {
             console.log('Ошибочный пароль пользователя.');
             res.redirect("/");    
         }
+    }
+    else { // user_check === undefined
+        console.log('Такой пользователь не найден.');
+        res.redirect("/");
     }
 });
 
