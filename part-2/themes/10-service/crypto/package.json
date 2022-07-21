@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "bcryptjs": "^2.4.3"
+    "bcryptjs": "^2.4.3",
+    "node-fetch": "^3.2.9"
   }
 }
