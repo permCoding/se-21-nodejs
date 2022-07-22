@@ -1,0 +1,22 @@
+{
+  "name": "modules",
+  "version": "1.0.0",
+  "description": "connecting modules",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/permCoding/se-21-nodejs.git"
+  },
+  "keywords": [
+    "ECMAScript"
+  ],
+  "author": "pcoding",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/permCoding/se-21-nodejs/issues"
+  },
+  "homepage": "https://github.com/permCoding/se-21-nodejs#readme"
+}
