@@ -1,0 +1,22 @@
+[
+    {
+        "item": "qwerty",
+        "hash": "ca61419a0df58e12d57781365b048d366f2fe404345b5bbe117a1b3f5ff1251e"
+    },
+    {
+        "item": "123456",
+        "hash": "210612d58ff2bf48c7fe97680a5d3ff534e07473705595291e56d6801d1655c7"
+    },
+    {
+        "item": "0000",
+        "hash": "2e3a392264e8d22e12a81b1602b5d55c0e6358a6bd76667c6ad3dc963400f0e1"
+    },
+    {
+        "item": "test",
+        "hash": "3fb20dd62b3e8109312a7be356ff4c815fced18dad47e0ca394424188041ed3e"
+    },
+    {
+        "item": "password",
+        "hash": "afe6c5530785b6cc6b1c6453384731bd5ee432ee549fd42fb6695779ad8a1c5b"
+    }
+]
