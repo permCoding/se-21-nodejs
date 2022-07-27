@@ -20,7 +20,7 @@ client.query(query, (err, res) => {
         console.error(err); 
         return; 
     } 
-    console.table(res.rows)
+    console.table(res.rows);
     // for (let row of res.rows) { console.log(row); } 
     client.end(); 
 });

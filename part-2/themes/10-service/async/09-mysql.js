@@ -15,9 +15,9 @@ let query_ = `SELECT Composer FROM tracks WHERE tracks.GenreId > `;
 conn.connect();
 
 for (let i = 0; i < 12; i++) {
-    console.table(`i -> ${i};\t${Date.now()-start}ms`);
     let query = query_ + String(i);
     conn.query(query, (err, results, fields) => {
+        if (err) throw err;
         console.table(`i = ${i};\t${Date.now()-start}ms`);
     });
 }
